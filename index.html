@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-      <title>Exchange. Decentralized. Literally.</title>
+      <title>ElevenBuckets: Exchange. Decentralized. Literally.</title>
       <link rel="stylesheet" href="css/style.css" />
       <link rel="icon" type="image/png" href="assets/favicon.png" />
 
@@ -12,36 +12,36 @@
       <script>
 	$(document).ready(function () {
     		$('#menu ul li a').click(function (ev) {
-        		$('#menu ul li').removeClass('selected');
-        		$(ev.currentTarget).parent('li').addClass('selected');
+        		$('#menu ul li a').removeClass('selected');
+        		$(ev.currentTarget).addClass('selected');
     		});
 	});
       </script>
 </head>
 <body style="font-family:fixed; font-size: 1.08em;" background="https://upload.wikimedia.org/wikipedia/commons/2/2b/Sunrise_Under_Cloudy_Sky_Illustration-67832.jpg">
-<table border=0 style="color: #ffffff; margin-top: 0%; margin-bottom: 12%; margin-right: 20%; margin-left:20%;">
+<div style="position: fixed; top: 0px;">
+<table border=0 style="color: #ffffff; margin-top: 0%; margin-bottom: 12%; margin-right: 35%; margin-left:35%;">
 <tbody>
 <tr>
-<td rowspan=2 align="center" style="padding-right:0px; padding-top: 0px;">
+<td rowspan=1 align="center" width="1px" style="padding-right:0px; margin: 0px; padding-top: 30px;">
 <img style="border:2px solid #eeffff; " src="assets/logo.png" width="128" height="128">
-</td><td width="72%" style="white-space: nowrap;">
+</td><td colspan=1>
 <div id="header">
-    <div id="menu" style="margin-top: 120px;">
+    <div id="menu" style="margin: 0px;">
         <ul class="current_page_itemm">
-            <li class="selected"><a href="#About">Home</a></li>
+            <li><a class="selected" href="#About">Home</a></li>
             <li><a href="#Blockchain">Blockchain</a></li>
             <li><a href="#Decentralized">Decentralized</a></li>
             <li><a href="#Projects">Projects</a></li>
-            <li><a href="#">More</a></li>
         </ul>
     </div>
 </div>
-<br><hr align="left" width="85%">
-</td>
+</td><tr><td colspan=2 ><hr align="left" style="color: white; min-width: 600px; max-width: 900px"></td></tr>
 </tr>
+</div>
 <tr>
-<td width="72%" style="max-height: 500px;">
-<div style="max-height: 500px; overflow: hidden;">
+<td colspan=2 style="min-width: 600px; max-width: 900px; max-height: 700px;">
+<div style="max-width: 900px; max-height: 900px; overflow: hidden;">
 <a name="About" style="color: #ffffff; text-decoration: none;"><br>
 <p style="text-align: justify">
 We believe tokenization via programmable Blockchain has greater potential beyond “FinTech” applications such as payment or security. 
@@ -51,7 +51,7 @@ While often inevitably being dual-purposed as store of value, many tokens are cr
 <p style="text-align: justify">
 It is also our belief that, unlike stocks of a company, tokens with dApp reaching its maturity would require stable market price to encourage token circulation that ties to dApp utilization, instead of merely possessing them for financial gain.</p>
 </a>
-<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<div style="min-height: 1400px; max-height: 1400px; display: block;"></div>
 <a name="Blockchain" style="color: #ffffff; text-decoration: none;">
 <p style="text-align: justify">
 Inspired by existing fully on-chain exchanges such as Kyber Network and Bancor, we introduce an alternative implementation with two new concepts:
@@ -64,7 +64,7 @@ Inspired by existing fully on-chain exchanges such as Kyber Network and Bancor, 
 It is our current plan to build 11be on top of Ethereum blockchain.
 </p>
 </a>
-<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<div style="min-height: 1400px; max-height: 1400px; display: block;"></div>
 <a name="Decentralized" style="color: #ffffff; text-decoration: none;">
 <p style="text-align: justify">
 Many dApps on Ethereum network are hosted the same way as conventional website and utilize software extensions such as MetaMask for transactions in favor of easy access through web browsers.
@@ -76,7 +76,7 @@ While this approach certainly makes Blockchain and dApps more approachable to ge
 11be is built with dedicated UI layer functioning like standalone apps instead of web browser, along with package management via on-chain metadata for verifications.
 </p>
 </a>
-<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<div style="min-height: 1400px; max-height: 1400px; display: block;"></div>
 <a name="Projects" style="color: #ffffff; text-decoration: none;">
 <p style="text-align: justify">
 Currently, there are two components in 11be dApp:
@@ -93,7 +93,7 @@ Currently, there are two components in 11be dApp:
    </ul>
    </p>
 </a>
-<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<div style="min-height: 1400px; max-height: 1400px; display: block;"></div>
 </td></tr>
 </tbody>
 </table>

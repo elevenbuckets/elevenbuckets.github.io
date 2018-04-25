@@ -1,6 +1,6 @@
-#menu ul li.selected {
+#menu a.selected {
     color:#FFFFFF;
-    background: #910000;
+    background-color: #910000;
 }
 #menu ul {
     margin: 0;
@@ -11,12 +11,13 @@
 #menu li {
     display: block;
     float: left;
+    width: 400px;
 }
 #menu a {
     display: block;
     float: left;
     margin-right: 17px;
-    margin-left: 17px;
+    margin-left: 1px;
     padding: 5px 12px;
     text-decoration: none;
     font-size: 1.08em;
@@ -31,8 +32,7 @@
 
 #menu li:hover {
     text-decoration: underline;
-    background: #910000;
-    color:#000000;
+    color:#910000;
 }
 
 #menu a:active {
