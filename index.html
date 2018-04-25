@@ -4,23 +4,95 @@
   <meta charset="UTF-8">
       <title>Exchange. Decentralized. Literally.</title>
       <link rel="stylesheet" href="css/style.css" />
-      <link rel="icon" type="image/png" href="assets/favicon.png" /> 
+      <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js" 
+        integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC" 
+      crossorigin="anonymous"></script>  
+      <script>
+	$(document).ready(function () {
+    		$('#menu ul li a').click(function (ev) {
+        		$('#menu ul li').removeClass('selected');
+        		$(ev.currentTarget).parent('li').addClass('selected');
+    		});
+	});
+      </script>
 </head>
 <body style="font-family:fixed; font-size: 1.08em;" background="https://upload.wikimedia.org/wikipedia/commons/2/2b/Sunrise_Under_Cloudy_Sky_Illustration-67832.jpg">
-<table border=0 style="color: #ffffff; margin-top: 15%; margin-bottom: 15%; margin-right: 20%; margin-left:20%;">
+<table border=0 style="color: #ffffff; margin-top: 0%; margin-bottom: 15%; margin-right: 20%; margin-left:20%;">
 <tbody>
-<tr><td align="center" style="padding-right:36px; padding-top: 18px;">
-<img style="border:2px solid #eeffff; " src="assets/logo.png" width="96" height="96">
+<tr>
+<td rowspan=2 align="center" style="padding-right:0px; padding-top: 0px;">
+<img style="border:2px solid #eeffff; " src="assets/logo.png" width="128" height="128">
+</td><td width="72%" style="white-space: nowrap;">
+<div id="header">
+    <div id="menu" style="margin-top: 120px;">
+        <ul class="current_page_itemm">
+            <li class="current_page_item"><a href="#About">Home</a></li>
+            <li><a href="#Blockchain">Blockchain</a></li>
+            <li><a href="#Decentralized">Decentralized</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#">More</a></li>
+        </ul>
+    </div>
+</div>
 </td>
-<td>
+</tr>
+<tr>
+<td width="72%" style="max-height: 500px;">
+<div style="max-height: 500px; overflow: hidden;">
+<a name="About" style="color: #ffffff; text-decoration: none;"><br>
 <p style="text-align: justify">
-We believe tokenization via programmable <a href="blockchain.html" style="color: #ffffff; text-decoration: underline;">Blockchain</a> has greater potential beyond “FinTech” applications such as payment or security. 
+We believe tokenization via programmable Blockchain has greater potential beyond “FinTech” applications such as payment or security. 
 </p>
 <p style="text-align: justify">
-While often inevitably being dual-purposed as store of value, many tokens are created as symbols or emblems of participation that not only grant access to the associated dApps, but also enable sophiscated economic game theory for <a href="decentralized.html" style="color: #ffffff; text-decoration: underline;">decentralized</a>, self-regulated system governance, which makes them an essential and innovative element in Blockchain-based applications. </p>
+While often inevitably being dual-purposed as store of value, many tokens are created as symbols or emblems of participation that not only grant access to the associated dApps, but also enable sophiscated economic game theory for decentralized, self-regulated system governance, which makes them an essential and innovative element in Blockchain-based applications. </p>
 <p style="text-align: justify">
-It is also our belief that, unlike stocks of a company, tokens with <a href="dapp.html" style="color: #ffffff; text-decoration: underline;">dApp</a> reaching its maturity would require stable market price to encourage token circulation that ties to dApp utilization, instead of merely possessing them for financial gain.</p>
-</div>
+It is also our belief that, unlike stocks of a company, tokens with dApp reaching its maturity would require stable market price to encourage token circulation that ties to dApp utilization, instead of merely possessing them for financial gain.</p>
+</a>
+<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<a name="Blockchain" style="color: #ffffff; text-decoration: none;">
+<p style="text-align: justify">
+Inspired by existing fully on-chain exchanges such as Kyber Network and Bancor, we introduce an alternative implementation with two new concepts:
+   <ol type='I'>
+    <li>discrete dynamic price range that allows near real-time price update without order maker micro-managing the listing price</li>
+    <li>incentivised on-chain clearhouse via smart contract, which encourages participation of the platform day-to-day operation by sharing profit with participants.</li>
+   </ol>
+</p>
+<p style="text-align: justify">
+It is our current plan to build 11be on top of Ethereum blockchain.
+</p>
+</a>
+<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<a name="Decentralized" style="color: #ffffff; text-decoration: none;">
+<p style="text-align: justify">
+Many dApps on Ethereum network are hosted the same way as conventional website and utilize software extensions such as MetaMask for transactions in favor of easy access through web browsers.
+</p>
+<p style="text-align: justify">
+While this approach certainly makes Blockchain and dApps more approachable to general public as well as web app developers, it discards most of the benefits of Blockchain which enables peer-to-peer network, rapid data queries via local block storage, and independent transaction verification. In addition, the deep tie of dApps to web browser via conventional web hosting services make wallets and the associated private keys subject to malicious attacks and censorship.
+</p>
+<p style="text-align: justify">
+11be is built with dedicated UI layer functioning like standalone apps instead of web browser, along with package management via on-chain metadata for verifications.
+</p>
+</a>
+<div style="min-height: 300px; max-height: 300px; display: block;"></div>
+<a name="Projects" style="color: #ffffff; text-decoration: none;">
+<p style="text-align: justify">
+Currently, there are two components in <a href="/" title="return to homepage" style="color: #ffffff; text-decoration: underline;">11be</a> dApp:
+   <ul>
+    <li>Bolt: Wallet App</li><br>
+    A graphical front-end with custom extensions for the official Ethereum full node (geth), which we build from scratch and provides unique features such as conditional transaction batch queue, password manager, and built-in ERC20 and gas price estimation supports. Additionally, it facilitates a package release meta tracking for both on-chain and off-chain contents using smart contract.<p>
+    <li>ElevenBuckets Exchange (11be)</li><br>
+    Fully decentralized ERC20 token marketplace, which will have three different tiers:<p>
+      <table border=1 style="color: #ffffff; margin: 0px; border-collapse: collapse"><tbody>
+              <tr><td align="center">Boutique</td><td>Individual token holder with larger holdings can utilize our shop contract to list and sell tokens for Ether.</td></tr>
+              <tr><td align="center">Consignment</td><td>Individuals with smaller token holdings can jointly open a token consignment store using our Token Pool contract.</td></tr>
+              <tr><td align="center">Buckets</td><td>Token wholesale contracts utilizing price governance model and on-chain clearinghouse, both operates by community</td></tr>
+      </tbody></table>
+   </ul>
+   </p>
+</a>
+<div style="min-height: 300px; max-height: 300px; display: block;"></div>
 </td></tr>
 </tbody>
 </table>
