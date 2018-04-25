@@ -1,0 +1,40 @@
+#menu ul li.selected {
+    color:#000000;
+    background: #910000;
+}
+#menu ul {
+    margin: 0;
+    padding: 25px 0 0 20px;
+    list-style: none;
+    line-height: normal;
+}
+#menu li {
+    display: block;
+    float: left;
+}
+#menu a {
+    display: block;
+    float: left;
+    margin-right: 17px;
+    margin-left: 17px;
+    padding: 5px 8px;
+    text-decoration: none;
+    font-size: 1.08em;
+    font-weight: bold;
+    font-family: monospace;
+    color: #FFFFFF;
+}
+#menu a:hover {
+    text-decoration: underline;
+    background: #910000;
+    color:#FFFFFF;
+}
+
+#menu li:hover {
+    text-decoration: underline;
+    color:#000000;
+}
+
+#menu a:active {
+    color:#000000;
+}
