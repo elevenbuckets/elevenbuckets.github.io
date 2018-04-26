@@ -29,7 +29,7 @@ body {
 .main {
    grid-area: infopage;
    overflow: hidden;
-   font-size: 1.2em;
+   font-size: 1.1em;
 }
 
 #menu a.selected {
