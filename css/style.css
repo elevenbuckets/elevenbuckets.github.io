@@ -2,7 +2,7 @@ body {
    display: grid;
    min-height: 100%;
    grid-template-rows: 200px 700px 1fr;
-   grid-template-columns: 400px 2fr 1fr;
+   grid-template-columns: 380px 2fr 1fr;
    grid-template-areas: "stamp blanks cuts"
    		        "navigation infopage cuts";
 }
@@ -22,7 +22,7 @@ body {
 .logo {
    grid-area: stamp;
    text-align: center;
-   padding-left: 1px;
+   padding-right: 100px;
    padding-top: 20%;
 }
 
