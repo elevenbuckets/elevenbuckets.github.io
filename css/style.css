@@ -1,3 +1,36 @@
+body {
+   display: grid;
+   min-height: 100%;
+   grid-template-rows: 200px 700px 1fr;
+   grid-template-columns: 300px 2fr 1fr;
+   grid-template-areas: "stamp blanks cuts"
+   		        "navigation infopage cuts";
+}
+
+.blank {
+   grid-area: blanks;
+}
+
+.cut {
+   grid-area: cuts;
+}
+
+.navbar {
+   grid-area: navigation;
+}
+
+.logo {
+   grid-area: stamp;
+   text-align: center;
+   padding-left: 1px;
+   padding-top: 20%;
+}
+
+.main {
+   grid-area: infopage;
+   overflow: hidden;
+}
+
 #menu a.selected {
     color:#FFFFFF;
     background-color: #910000;
@@ -17,10 +50,10 @@
     display: block;
     float: left;
     margin-right: 17px;
-    margin-left: 1px;
+    margin-left: 17px;
     padding: 5px 12px;
     text-decoration: none;
-    font-size: 1.08em;
+    font-size: 1.4em;
     font-weight: bold;
     font-family: monospace;
     color: #FFFFFF;
