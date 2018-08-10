@@ -69,7 +69,7 @@ body {
 .content {
     display: grid;
     overflow-x: hidden;
-    max-height: 550px;
+    max-height: 95%;
     grid-area: content;
     justify-content: center;
     align-items: center;
@@ -181,6 +181,7 @@ body {
 
     .content {
         max-height: 95%;
+        margin: 10px;
     }
 
     .content p {
