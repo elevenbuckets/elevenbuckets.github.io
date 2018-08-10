@@ -1,74 +1,211 @@
+:root {
+    --yellow: #ffc600;
+    --black: #272727;
+    --oak: #910000;
+}
+  
+html {
+    /* border-box box model allows us to add padding and border to our elements without increasing their size */
+    box-sizing: border-box;
+    /* A system font stack so things load nice and quick! */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 900;
+    font-size: 10px;
+    color: var(--black);
+    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+  
 body {
+   background: url(/assets/Background.jpg);
+   background-size: 1280px auto;
    display: grid;
-   min-height: 100%;
-   grid-template-rows: 200px 700px 1fr;
-   grid-template-columns: 380px 2fr 1fr;
-   grid-template-areas: "stamp blanks cuts"
-   		        "navigation infopage cuts";
-}
-
-.blank {
-   grid-area: blanks;
-}
-
-.cut {
-   grid-area: cuts;
-}
-
-.navbar {
-   grid-area: navigation;
-}
-
-.logo {
-   grid-area: stamp;
-   text-align: center;
-   padding-right: 100px;
-   padding-top: 20%;
-}
-
-.main {
-   grid-area: infopage;
    overflow: hidden;
-   font-size: 1.1em;
+   min-height: calc(100vh - 0px);
+   margin: 0px;
+   grid-template-rows: 180px auto 100px;
+   grid-template-columns: 180px 1fr;
+   grid-template-areas: 
+    "topbar topbar"
+    "content content"
+    "footer footer";
 }
 
-#menu a.selected {
-    color:#FFFFFF;
-    background-color: #910000;
+/* Each item in our grid will contain numbers */
+.item {
+    /* We center the contents of these items. You can also do this with flexbox too! */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    /*
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 6px;
+    */
+    font-size: 27px;
+    color: white;
 }
-#menu ul {
-    margin: 0;
-    padding: 25px 0 0 20px;
-    list-style: none;
-    line-height: normal;
+  
+.item p {
+    margin: 0 0 5px 0;
 }
-#menu li {
-    display: block;
-    float: left;
-    width: 400px;
+  
+.topside {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 35px 1fr;
+    grid-template-areas:
+    "logo . " 
+    "logo navigation";
+    grid-area: topbar;
+    background: linear-gradient(180deg, #05040485, #2f08990e);
 }
-#menu a {
-    display: block;
-    float: left;
-    margin-right: 17px;
-    margin-left: 17px;
-    padding: 5px 12px;
+
+.content {
+    display: grid;
+    overflow-x: hidden;
+    max-height: 550px;
+    grid-area: content;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 16px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.21);
+}
+
+.content p {
+    text-align: justify;
+    margin: 25px;
+}
+
+.navibar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: navigation;
+}
+
+.mylogo {
+    display: grid;
+    grid-area: logo;
+}
+
+.logopic {
+    margin: 30px; 
+    border:2px solid #eeffff;
+}
+
+.myhome {
+    display: grid;
+}
+
+.myhome a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.myhome a {
     text-decoration: none;
-    font-size: 1.4em;
-    font-weight: bold;
-    font-family: monospace;
-    color: #FFFFFF;
-}
-#menu a:hover {
-    text-decoration: underline;
-    color:#FFFFFF;
+    color: white;
 }
 
-#menu li:hover {
-    text-decoration: underline;
-    color:#910000;
+.myabout {
+    display: grid;
 }
 
-#menu a:active {
-    color:#FFFFFF;
+.myabout a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.myabout a {
+    text-decoration: none;
+    color: white;
+}
+
+.mydemo {
+    display: grid;
+}
+
+.mydemo a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.mydemo a {
+    text-decoration: none;
+    color: white;
+}
+
+.mycontact {
+    display: grid;
+}
+
+.mycontact a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
+.mycontact a {
+    text-decoration: none;
+    color: white;
+}
+
+.copyright {
+    font-size: 10px;
+}
+
+.footbar {
+    display: grid;
+    grid-area: footer;
+    background: linear-gradient(180deg, #fafafa07, #08050fd2);
+}
+
+@media (max-width: 801px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 4fr 1fr;
+        grid-template-areas: 
+        "topbar"
+        "content"
+        "footer";
+        background-repeat: space;
+    }
+
+    .content {
+        max-height: 95%;
+    }
+
+    .content p {
+        text-align: left;
+    }
+
+    .logopic {
+        width: 64px;
+        height: 64px;
+        margin: 6px;
+    }
+
+    .topside {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "logo navigation";
+    }
+
+    .item {
+        font-size: 16px;
+    }
+
+    .navibar {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+    }
 }

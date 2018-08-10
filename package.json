@@ -4,19 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "node_modules/.bin/browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --port 7878 --directory"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/elevenbuckets/elevenbuckets.github.io.git"
-  },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/elevenbuckets/elevenbuckets.github.io/issues"
-  },
-  "homepage": "https://github.com/elevenbuckets/elevenbuckets.github.io#readme",
   "dependencies": {
     "browser-sync": "^2.24.6"
   }

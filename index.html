@@ -1,98 +1,79 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-      <title>ElevenBuckets: Exchange. Decentralized. Literally.</title>
-      <link rel="stylesheet" href="css/style.css" />
-      <link rel="icon" type="image/png" href="assets/favicon.png" />
+	<meta charset="UTF-8">
+	<title>ElevenBuckets: Exchange. Decentralized. Literally.</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="icon" type="image/png" href="assets/favicon.png" />
 
-      <script src="https://code.jquery.com/jquery-2.1.4.min.js" 
-        integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC" 
-      crossorigin="anonymous"></script>  
-      <script>
-	$(document).ready(function () {
-    		$('#menu ul li a').click(function (ev) {
-        		$('#menu ul li a').removeClass('selected');
-        		$(ev.currentTarget).addClass('selected');
-    		});
-		$('#default').click()
-	});
-      </script>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
+	 crossorigin="anonymous"></script>
 </head>
-<div class="blank">
-</div>
-<div class="cut">
-</div>
-<body style="font-family:monospace; font-size: 1.08em;" background="https://upload.wikimedia.org/wikipedia/commons/2/2b/Sunrise_Under_Cloudy_Sky_Illustration-67832.jpg">
-<div class="logo">
-  <img style="border:2px solid #eeffff; " src="assets/logo.png" width="128" height="128">
-</div>
-<div class="navbar">
-    <div id="header">
-    	<div id="menu" style="margin: 0px;">
-        	<ul class="current_page_itemm">
-            		<li style="margin-top: 10px;"><a id="default" href="#About">Home</a></li>
-            		<li><a href="#Decentralized">Decentralized</a></li>
-            		<li><a href="#Demo">Demo (New!)</a></li>
-            		<li><a href="#Contacts">Contact</a></li>
-        	</ul>
-    	</div>
-    </div>
-</div>
-
-<div class="main">
-	<table border=0><tbody><tr><td>
-	 <a name="About" style="color: #ffffff; text-decoration: none;"><br>
-		 <p style="text-align: justify">
-		 In reality, dApps require additional off-chain components that work in conjunction with on-chain smart contracts, which are often outside the scope of the Blockchain peer-to-peer network. Perhaps for the sake of faster time-to-market, many dApps today choose to build on top of existing web 2.0 infrastructure that provides little or zero decentralization against censorship, denial-of-service, or any form of attacks against single-point-of-failure of the system.
-		 </p>
-		 <p style="text-align: justify">
-		 In other words, from the full system point-of-view, Blockchain is just one of the many components in dApp architecture. Before any user data or transactions reaches the Blockchain peer-to-peer network, any centralization in other system components could defeat the purpose of its adoption: Since Blockchain is essentially cryptographic protection scheme against Byzantine failure with emphasis on the distributed nature of what it protects. When a dApp choose to expose centralized entrypoint for its users, the benefits offered by Blockchain cannot cover their actions with the app. Instead this design simply benefits the few entities behind dApp operation. Under the "false sense of decentralization", these entities actually turning themselves into overpowered trusted third parties which all of their dApp users must rely on.
-		 </p>
-	 </a>
-	  <div style="min-height: 500px"></div>
-	  <a name="Decentralized" style="color: #ffffff; text-decoration: none;"><br>
-	    <p style="text-align: justify">
-	    Many dApps on Ethereum network are hosted
-	    the same way as conventional website and
-	    utilize software extensions such as MetaMask
-	    for transactions in favor of easy access
-	    through web browsers.</p>
-	    While this approach certainly makes
-	    Blockchain and dApps more approachable to
-	    general public as well as web app developers,
-	    it discards most of the benefits of Blockchain
-	    which enables peer-to-peer network, rapid
-	    data queries via local block storage, and
-	    independent transaction verification.
-	    <p style="text-align: justify">
-	    In addition, the deep tie of dApps to web
-	    browser via conventional web hosting
-	    services make wallets and the associated
-	    private keys subject to malicious attacks and
-	    censorship.</p>
-	  </a>
-	  <div style="min-height: 800px"></div>
-	  <a name="Demo" style="color: #ffffff; text-decoration: none;"><br>
-		<div style="margin: 0 0 5 0; padding: 0 0 15 0; display: block; background-color: rgba(255,255,255,0.5); max-width: 566px;"><p>Related Links</p>
-			<a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver Meetup (2018/06/21)</a><br>
-			<a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder Meetup (2018/06/27)</a>
+<body>
+	<div class="topside">
+		<div class="item mylogo"><img class="logopic" src="assets/logo.png" width="128" height="128"></div>
+		<div class="navibar">
+			<div class="item myhome"><a href="#" onclick="loadText('About')">Platform</a></div>
+		  <div class="item myabout"><a href="#" onclick="loadText('Vision')">Vision</a></div>
+		  <div class="item mydemo"><a href="#" onclick="loadText('Demos')">Demos</a></div>
+		  <div class="item mycontact"><a href="#" onclick="loadText('Contact')">Contact</a></div>
 		</div>
-		<iframe width="280" height="157" src="https://www.youtube.com/embed/QE9GYkXXixc?rel=0" 
-			frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-		</iframe>
-		<iframe width="280" height="157" src="https://www.youtube.com/embed/oxZtWhXrHbM?rel=0" 
-			frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-		</iframe>
-	  </a>
-	  <div style="min-height: 500px"></div>
-	  <a name="Contacts" style="color: #ffffff; text-decoration: none;"><br>
-		  <p>mail: hello_at_elevenbuckets_dot_com</p>
-		  <p>twitter: <a style="text-decoration: none; color: #ffffff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></p>
-	  </a>
-	  <div style="min-height: 500px"></div>
-        </td></tr>
-       </tbody>
-     </table>
-</div>
+	</div>
+	<div class="content"><p id="contentxt"></p></div>
+	<div class="footbar">
+		<br>
+		<p class="item copyright">Copyright 2018. ElevenBuckets LLC.</p>
+	</div>
+
+	<script>
+		function loadText(section) {
+			if (section === 'About') {
+				  document.getElementById("contentxt").innerHTML = 
+				 `In reality, dApps require additional off-chain components that work in conjunction with on-chain smart contracts, which are 
+					often outside the scope of the Blockchain peer-to-peer network. Perhaps for the sake of faster time-to-market, many dApps today 
+					choose to build on top of existing web 2.0 infrastructure that provides little or zero decentralization against censorship, 
+					denial-of-service, or any form of attacks against single-point-of-failure of the system.<br><br>
+					In other words, from the full system point-of-view, Blockchain is just one of the many components in dApp architecture. Before 
+					any user data or transactions reaches the Blockchain peer-to-peer network, any centralization in other system components could 
+					defeat the purpose of its adoption: Since Blockchain is essentially cryptographic protection scheme against Byzantine failure 
+					with emphasis on the distributed nature of what it protects. When a dApp choose to expose centralized entrypoint for its users, 
+					the benefits offered by Blockchain cannot cover their actions with the app. <br><br>
+					Instead this design simply benefits the few entities behind dApp operation. Under the "false sense of decentralization", these 
+					entities actually turning themselves into overpowered trusted third parties which all of their dApp users must rely on.`
+			} else if (section === 'Vision') {
+				  document.getElementById("contentxt").innerHTML =
+				 `By utilizing smart contract states as source of truth, the next generation "dApp stores" will enable the creation of decentralized 
+				  develper communities building upon open standards without any central authority nor distribution channel. <br><br>
+					Building a "no-shortcut" solution to dApp development, ElevenBuckets aiming to provide dedicated Electron-based UI connecting 
+					directly to local full node (geth), forming a foundation of dApp ecosystem on top of Ethereum Blockchain. We believe this full 
+					stack solution offers truly peer-to-peer dApp architecture with advantages of ensuring the trustless, censorship-free ideals of 
+					Blockchain being expanded to cover off-chain infrastructure.`
+			} else if (section === 'Demos') {
+				document.getElementById("contentxt").innerHTML =
+				`<div align="center" style="display: block;">
+				<p style="align-items: center;"> Videos: <br>
+				<iframe width="200" height="94" style="display: inline-block; border: 1px solid white" src="https://www.youtube.com/embed/QE9GYkXXixc?rel=0" 
+                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+         </iframe>
+         <iframe width="200" height="94" style="display: inline-block; border: 1px solid white" src="https://www.youtube.com/embed/oxZtWhXrHbM?rel=0" 
+                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+         </iframe>
+				</p>
+				<p> Past Meetups: <br>
+            <a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver (2018/06/21)</a><br>
+            <a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder (2018/06/27)</a>
+				</p>
+         </div>`
+			} else if (section === 'Contact') {
+				document.getElementById("contentxt").innerHTML =
+				`<p>mail: hello_at_elevenbuckets_dot_com</p>
+         <p>twitter: <a style="text-decoration: none; color: #ffffff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></p>`
+			} else {
+			  return loadText('About');
+			}
+		}
+
+		$(document).ready(loadText);
+	</script>
 </body>
