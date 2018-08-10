@@ -111,6 +111,12 @@ body {
     text-decoration: underline;
 }
 
+.myhome a:focus {
+    color: var(--yellow);
+    text-decoration: underline;
+    outline: none;
+}
+
 .myhome a {
     text-decoration: none;
     color: white;
@@ -123,6 +129,12 @@ body {
 .myabout a:hover {
     color: var(--yellow);
     text-decoration: underline;
+}
+
+.myabout a:focus {
+    color: var(--yellow);
+    text-decoration: underline;
+    outline: none;
 }
 
 .myabout a {
@@ -139,6 +151,12 @@ body {
     text-decoration: underline;
 }
 
+.mydemo a:focus {
+    color: var(--yellow);
+    text-decoration: underline;
+    outline: none;
+}
+
 .mydemo a {
     text-decoration: none;
     color: white;
@@ -151,6 +169,12 @@ body {
 .mycontact a:hover {
     color: var(--yellow);
     text-decoration: underline;
+}
+
+.mycontact a:focus {
+    color: var(--yellow);
+    text-decoration: underline;
+    outline: none;
 }
 
 .mycontact a {
