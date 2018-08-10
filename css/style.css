@@ -24,7 +24,7 @@ html {
   
 body {
    background: url(/assets/Background.jpg);
-   background-size: auto 1080px;
+   background-size: 1920px auto; 
    display: grid;
    overflow: hidden;
    min-height: calc(100vh - 0px);
