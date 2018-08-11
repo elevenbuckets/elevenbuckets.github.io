@@ -20,7 +20,7 @@
 		  <div class="item mycontact"><a href="#" onclick="loadText('Contact')">Contact</a></div>
 		</div>
 	</div>
-	<div class="content"><p id="contentxt" style="margin: 0 50px 0 50px; font-size: 20px;"></p></div>
+	<div class="content"><p id="contentxt"></p></div>
 	<div class="footbar">
 		<br>
 		<p class="item copyright">Copyright 2018. ElevenBuckets LLC.</p>
@@ -51,26 +51,28 @@
 					Blockchain being expanded to cover off-chain infrastructure.`
 			} else if (section === 'Demos') {
 				document.getElementById("contentxt").innerHTML =
-				`<div align="center" style="display: block;">
-				<p style="align-items: center;"> Videos: <br>
-				<iframe width="200" height="94" style="display: inline-block; border: 1px solid white" src="https://www.youtube.com/embed/QE9GYkXXixc?rel=0" 
-                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-         </iframe>
-         <iframe width="200" height="94" style="display: inline-block; border: 1px solid white" src="https://www.youtube.com/embed/oxZtWhXrHbM?rel=0" 
-                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-         </iframe>
-				</p>
-				<p> Past Meetups: <br>
-            <a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver (2018/06/21)</a><br>
-            <a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder (2018/06/27)</a>
-				</p>
-         </div>`
+				`<div class="mediaContainer">
+				<p style="grid-area: vidtitle; max-width: 45%;"> Videos: </p>
+				  <iframe style="grid-area: vidOne; border: 1px solid white" 
+				     src="https://www.youtube.com/embed/QE9GYkXXixc?rel=0" 
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                  </iframe>
+				  <iframe style="grid-area: vidTwo; border: 1px solid white" 
+				     src="https://www.youtube.com/embed/oxZtWhXrHbM?rel=0" 
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                  </iframe>
+			    <p style="grid-area: pmtitle; max-width: 45%;"> Meetups: </p>
+				  <div style="grid-area: pminfo;">
+                    <a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver Meetup(2018/06/21)</a><br>
+                    <a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder Meetup(2018/06/27)</a>
+				  </div>
+				</div>`
 			} else if (section === 'Contact') {
 				document.getElementById("contentxt").innerHTML =
 				`<p>mail: hello_at_elevenbuckets_dot_com</p>
          <p>twitter: <a style="text-decoration: none; color: #ffffff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></p>`
 			} else {
-			  return loadText('About');
+			  return loadText('Demos');
 			}
 		}
 

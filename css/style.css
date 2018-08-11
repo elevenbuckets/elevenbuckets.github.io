@@ -79,11 +79,35 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.78);
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.21);
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 5% 1fr 5%;
+    grid-template-areas:
+    ". . ." 
+    ". centercontent ."
+    ". . .";
 }
 
-.content p {
+#contentxt {
+    height: 100%; 
+    width: 100%; 
+    font-size: 20px;
+    grid-area: centercontent;
     text-align: justify;
-    margin: 25px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.mediaContainer {
+    display: grid;
+    grid-template-rows: 60px 8fr 60px 2fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "vidtitle ."
+      "vidOne vidTwo"
+      "pmtitle ."
+      "pminfo pminfo";
+    text-align: center;
 }
 
 .navibar {
