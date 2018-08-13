@@ -99,13 +99,16 @@ body {
 }
 
 .mediaContainer {
+    align-items: center;
+    padding: 0px;
+    justify-content: center;
     display: grid;
-    grid-template-rows: 60px 8fr 60px 2fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 80px;
+    grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-areas: 
-      "vidtitle ."
+      "vidtitle vidtitle"
       "vidOne vidTwo"
-      "pmtitle ."
+      "pmtitle pmtitle"
       "pminfo pminfo";
     text-align: center;
 }
