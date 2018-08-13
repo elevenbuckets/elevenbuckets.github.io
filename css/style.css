@@ -104,13 +104,18 @@ body {
     justify-content: center;
     display: grid;
     grid-template-rows: 1fr 2fr 1fr 80px;
-    grid-template-columns: repeat(auto-fit, 1fr);
     grid-template-areas: 
-      "vidtitle vidtitle"
-      "vidOne vidTwo"
-      "pmtitle pmtitle"
-      "pminfo pminfo";
+      "vidtitle"
+      "videos"
+      "pmtitle"
+      "pminfo";
     text-align: center;
+}
+
+.videoContainer {
+    grid-area: videos;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-gap: 5px;
 }
 
 .navibar {

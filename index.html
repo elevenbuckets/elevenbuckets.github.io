@@ -53,18 +53,20 @@
 				document.getElementById("contentxt").innerHTML =
 				`<div class="mediaContainer">
 				<p style="grid-area: vidtitle; text-align: center; background-color: rgba(255,255,255,0.09)"> Videos </p>
-				  <iframe style="grid-area: vidOne; border: 1px solid white; width: minmax(50%, 560px);" 
+				 <div class="videoContainer">
+				  <iframe style="border: 1px solid white; width: minmax(50%, 560px);" 
 				     src="https://www.youtube.com/embed/QE9GYkXXixc?rel=0" 
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                   </iframe>
-				  <iframe style="grid-area: vidTwo; border: 1px solid white; width: minmax(50%, 560px)" 
+				  <iframe style="border: 1px solid white; width: minmax(50%, 560px)" 
 				     src="https://www.youtube.com/embed/oxZtWhXrHbM?rel=0" 
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
                   </iframe>
+				 </div>
 			    <p style="grid-area: pmtitle; text-align: center; background-color: rgba(255,255,255,0.09)"> Meetups </p>
 				  <div style="grid-area: pminfo;">
-                    <a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver Meetup(2018/06/21)</a><br>
-                    <a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder Meetup(2018/06/27)</a>
+                    <a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver (2018/06/21)</a><br>
+                    <a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder (2018/06/27)</a>
 				  </div>
 				</div>`
 			} else if (section === 'Contact') {
