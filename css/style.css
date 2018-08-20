@@ -117,8 +117,7 @@ body {
 .picContainer {
     display: grid;
     grid-area: pictures;
-    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, minmax(384px, 1fr));
     grid-gap: 5px;
     justify-items: center;
     align-self: baseline;
@@ -129,8 +128,7 @@ body {
     align-self: baseline;
     display: grid;
     grid-area: videos;
-    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, minmax(384px, 1fr));
     grid-gap: 5px;
 }
 
