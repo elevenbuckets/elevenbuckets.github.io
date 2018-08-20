@@ -99,6 +99,7 @@ body {
 }
 
 .mediaContainer {
+    overflow-y: scroll;
     align-items: center;
     padding: 0px;
     justify-content: center;
