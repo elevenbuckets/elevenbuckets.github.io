@@ -68,7 +68,7 @@ body {
 
 .content {
     display: grid;
-    overflow-y: scroll;
+    overflow-y: auto;
     max-height: calc(100vh - 320px);
     grid-area: content;
     justify-content: center;
@@ -233,7 +233,7 @@ body {
 }
 
 .copyright {
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .footbar {
