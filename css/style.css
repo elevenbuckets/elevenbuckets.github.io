@@ -68,7 +68,7 @@ body {
 
 .content {
     display: grid;
-    overflow-x: hidden;
+    overflow-y: scroll;
     max-height: 95%;
     grid-area: content;
     justify-content: center;
@@ -77,7 +77,7 @@ body {
     font-size: 16px;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.78);
-    border-radius: 16px;
+    border-radius: 0px;
     background: rgba(255, 255, 255, 0.21);
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: 5% 1fr 5%;
