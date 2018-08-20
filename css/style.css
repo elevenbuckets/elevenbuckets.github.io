@@ -69,7 +69,7 @@ body {
 .content {
     display: grid;
     overflow-y: scroll;
-    max-height: 95%;
+    max-height: calc(100vh - 320px);
     grid-area: content;
     justify-content: center;
     align-items: center;
