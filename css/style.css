@@ -118,19 +118,23 @@ body {
 .picContainer {
     display: grid;
     grid-area: pictures;
-    grid-template-columns: repeat(2, minmax(384px, 1fr));
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: ". pics .";
     grid-gap: 5px;
     justify-items: center;
+    text-align: center;
     align-self: baseline;
 }
 
 .videoContainer {
     justify-items: center;
-    align-self: baseline;
+    align-self: center;
     display: grid;
     grid-area: videos;
-    grid-template-columns: repeat(2, minmax(384px, 1fr));
+    grid-template-columns: 1fr repeat(auto-fit, 1fr) 1fr;
+    grid-template-areas: ". vids .";
     grid-gap: 5px;
+    align-self: center;
 }
 
 .navibar {
