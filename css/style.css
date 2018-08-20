@@ -103,18 +103,34 @@ body {
     padding: 0px;
     justify-content: center;
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr 80px;
+    grid-template-rows: 70px 1fr 70px 2fr 100px 40px;
+    grid-template-columns: 1fr;
     grid-template-areas: 
       "vidtitle"
       "videos"
+      "pictitle"
+      "pictures"
       "pmtitle"
       "pminfo";
     text-align: center;
 }
+.picContainer {
+    display: grid;
+    grid-area: pictures;
+    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+    grid-template-rows: 1fr;
+    grid-gap: 5px;
+    justify-items: center;
+    align-self: baseline;
+}
 
 .videoContainer {
+    justify-items: center;
+    align-self: baseline;
+    display: grid;
     grid-area: videos;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+    grid-template-rows: 1fr;
     grid-gap: 5px;
 }
 
