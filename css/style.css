@@ -69,6 +69,7 @@ body {
 .content {
     display: grid;
     overflow-x: hidden;
+    overflow-y: scroll;
     max-height: 95%;
     grid-area: content;
     justify-content: center;
@@ -99,7 +100,6 @@ body {
 }
 
 .mediaContainer {
-    overflow-y: scroll;
     align-items: center;
     padding: 0px;
     justify-content: center;
