@@ -267,6 +267,12 @@ body {
     .content {
         max-height: 95%;
         margin: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 1fr 5%;
+        grid-template-areas:
+        "." 
+        "centercontent"
+        ".";
     }
 
     .content p {
@@ -278,7 +284,7 @@ body {
       "vidtitle"
       "videos"
       "pictitle"
-       "pictures"
+      "pictures"
       "pmtitle"
       "pminfo";
     }
