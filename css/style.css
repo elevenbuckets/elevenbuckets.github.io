@@ -242,7 +242,7 @@ body {
     background: linear-gradient(180deg, #fafafa07, #08050fd2);
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1280px) {
     body {
         grid-template-columns: 1fr;
         grid-template-rows: auto 4fr 1fr;
