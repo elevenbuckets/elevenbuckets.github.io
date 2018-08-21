@@ -136,6 +136,16 @@ body {
     align-self: center;
 }
 
+.meetupLinks a {
+    text-decoration: none;
+    color: white;
+}
+
+.meetupLinks a:hover {
+    color: var(--yellow);
+    text-decoration: underline;
+}
+
 .navibar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -246,7 +256,7 @@ body {
 @media (max-width: 1080px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-rows: auto 4fr 1fr;
+        grid-template-rows: 72px 1fr 36px;
         grid-template-areas: 
         "topbar"
         "content"
@@ -296,7 +306,8 @@ body {
         font-size: 35px;
     }
 
-    .navibar div {
+    .navibar div:hover {
         border: 1px solid white;
+        background-color: rgba(0, 0, 0, 0.37);
     }
 }
