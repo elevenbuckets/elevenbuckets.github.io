@@ -234,6 +234,7 @@ body {
 
 .copyright {
     font-size: 12px;
+    text-align: center;
 }
 
 .footbar {
@@ -292,5 +293,10 @@ body {
     .navibar {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(auto-fit, 1fr);
+        font-size: 35px;
+    }
+
+    .navibar div {
+        border: 1px solid white;
     }
 }
