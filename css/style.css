@@ -257,7 +257,7 @@ body {
     body {
         max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
-        grid-template-rows: 72px 1fr 36px;
+        grid-template-rows: 72px 1fr 56px;
         grid-template-areas: 
         "topbar"
         "content"
