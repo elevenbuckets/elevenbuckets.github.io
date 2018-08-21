@@ -267,6 +267,8 @@ body {
     .content {
         max-height: 95%;
         margin: 10px;
+        padding: 20px;
+        padding-right: 17px;
         grid-template-columns: 1fr;
         grid-template-rows: 5% 1fr 5%;
         grid-template-areas:
