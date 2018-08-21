@@ -255,6 +255,7 @@ body {
 
 @media (max-width: 1080px) {
     body {
+        max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
         grid-template-rows: 72px 1fr 36px;
         grid-template-areas: 
