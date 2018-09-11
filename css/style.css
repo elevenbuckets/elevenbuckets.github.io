@@ -273,7 +273,7 @@ body {
     body {
         max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
-        grid-template-rows: 110px 1fr 56px;
+        grid-template-rows: 72px 1fr 56px;
         grid-template-areas: 
         "topbar"
         "content"
@@ -313,14 +313,14 @@ body {
     }
 
     .logopic {
-        width: 96px;
-        height: 96px;
+        width: 64px;
+        height: 64px;
         margin: 6px;
     }
 
     .mylogo {
         grid-template-columns: 1fr;
-        margin: 5px 4px 0 20px;
+        margin: 5px 5px 0 20px;
     }
 
     .logotext { 
@@ -332,6 +332,7 @@ body {
         grid-template-rows: auto;
         grid-template-areas: 
         "logo navigation";
+        grid-gap: 30px;
     }
 
     .item {
@@ -340,9 +341,9 @@ body {
 
     .navibar {
         grid-gap: 2px;
-        justify-items: baseline;
-        margin: 0 calc(100vw - 360px) 0 0;
-        grid-template-columns: 1fr;
+        justify-items: center;
+        margin: 0 20px 0 4px;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(auto-fit, 1fr);
         font-size: 35px;
         padding-top: 10px;
@@ -351,26 +352,5 @@ body {
     .navibar div:hover {
         border: 1px solid white;
         background-color: rgba(0, 0, 0, 0.37);
-    }
-    
-    @media(max-height: 1080px) {
-        body {
-            grid-template-rows: 72px 1fr 56px;
-        }
-    
-        .logopic {
-            width: 64px;
-            height: 64px;
-        }
-    
-        .navibar {
-            grid-gap: 2px;
-            justify-items: center;
-            margin: 0 4px 0 0;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(auto-fit, 1fr);
-            font-size: 35px;
-            padding-top: 10px;
-        }
     }
 }
