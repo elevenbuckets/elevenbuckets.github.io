@@ -354,7 +354,7 @@ body {
     }
 }
 
-@media(max-height: 400px) {
+@media(max-height: 750px) {
     body {
         grid-template-rows: 72px 1fr 56px;
     }
