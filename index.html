@@ -23,7 +23,7 @@
 		  <div class="item mycontact"><a href="#" onclick="loadText('Contact')">Contact</a></div>
 		</div>
 	</div>
-	<div class="content"><p id="contentxt"></p></div>
+	<div class="content" id="content"><p id="contentxt"></p></div>
 	<div class="footbar">
 		<br>
 		<p class="item copyright">©	ElevenBuckets.com	2018.	All rights reserved.</p>
@@ -31,9 +31,11 @@
 
 	<script>
 		function loadText(section) {
-			if (section === 'About') {
+			if (section === 'Vision') {
+					document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
 				  document.getElementById("contentxt").innerHTML = 
-				 `In reality, dApps require additional off-chain components that work in conjunction with on-chain smart contracts, which are 
+				 `<h2>Decentralized, not merely Blockchain-based</h2>
+				  In reality, dApps require additional off-chain components that work in conjunction with on-chain smart contracts, which are 
 					often outside the scope of the Blockchain peer-to-peer network. Perhaps for the sake of faster time-to-market, many dApps today 
 					choose to build on top of existing web 2.0 infrastructure that provides little or zero decentralization against censorship, 
 					denial-of-service, or any form of attacks against single-point-of-failure of the system.<br><br>
@@ -44,9 +46,11 @@
 					the benefits offered by Blockchain cannot cover their actions with the app. <br><br>
 					Instead this design simply benefits the few entities behind dApp operation. Under the "false sense of decentralization", these 
 					entities actually turning themselves into overpowered trusted third parties which all of their dApp users must rely on.`
-			} else if (section === 'Vision') {
+			} else if (section === 'About') {
+					document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
 				  document.getElementById("contentxt").innerHTML =
-				 `We introduce a full-stack solution for dApp ecosystem with open source software development kit focusing on seamless integration 
+				 `<h2>Full-stack Web 3.0 done right</h2>
+				 	We introduce a full-stack solution for dApp ecosystem with open source software development kit focusing on seamless integration 
 				  between applications to local full node. This design enables truly peer-to-peer dApp architecture with advantages of ensuring the 
 					trustless, censorship-free ideals of Blockchain being expanded to cover off-chain infrastructure. <br><br> 
 					The long-term vision of the platform leads to many expansion of capabilities through pluggable system design that can be realized 
@@ -54,9 +58,10 @@
 					process via on-chain release management, can further improve user experiences with consistent user interface as well as fighting 
 					fraud through app reviews and by empowering users to independently verify package metadata recorded in smart contracts. `
 			} else if (section === 'Demos') {
+				document.getElementById("content").style.backgroundColor = 'rgba(25,255,255,0.21)';
 				document.getElementById("contentxt").innerHTML =
 				`<div class="mediaContainer">
-				<p style="grid-area: vidtitle; font-size: 20px; text-align: center; background-color: rgba(255,255,255,0.09)"> Videos </p>
+				<p style="grid-area: vidtitle; color: var(--yellow); font-size: 20px; text-align: center; background-color: rgba(2,2,2,0.24)"> Videos </p>
 				 <div class="videoContainer">
 				  <div style="grid-area: vids">
 				  <iframe style="display: inline-block; border: 1px solid white; width: 330px; height: 210px;" 
@@ -69,7 +74,7 @@
                   </iframe>
 					</div>
 				 </div>
-				<p style="grid-area: pictitle; font-size: 20px; text-align: center; background-color: rgba(255,255,255,0.09)"> Coming Soon! </p>
+				<p style="grid-area: pictitle; font-size: 20px; color: var(--yellow); text-align: center; background-color: rgba(2,2,2,0.24)"> Coming Soon! </p>
 				  <div class="picContainer">
 					<div style="grid-area: pics;">
 					<a href="./assets/screenshot02.png">
@@ -86,13 +91,14 @@
 					</a>
 				  </div>
 				</div>
-			    <p style="grid-area: pmtitle; font-size: 20px; text-align: center; background-color: rgba(255,255,255,0.09)"> Meetups </p>
+			    <p style="grid-area: pmtitle; font-size: 20px; color: var(--yellow); text-align: center; background-color: rgba(2,2,2,0.21)"> Meetups </p>
 				  <div class="meetupLinks" style="grid-area: pminfo; padding-bottom: 20px;">
                     <a href=https://www.meetup.com/Ethereum-Denver/events/248470497/>Ethereum Denver (2018/06/21)</a><br>
                     <a href=https://www.meetup.com/Ethereum-Boulder/events/thgfmpyxjbkc/>Ethereum Boulder (2018/06/27)</a>
 				  </div>
 				</div>`
 			} else if (section === 'Contact') {
+				document.getElementById("content").style.backgroundColor = 'rgba(25,255,255,0.21)';
 				document.getElementById("contentxt").innerHTML =
 				`<ul class="item contactinfo" style="padding: 5% 0 5% 0; font-family: monospace;">
 				 <li>Twitter: <a style="text-decoration: none; color: #33aaff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></li>

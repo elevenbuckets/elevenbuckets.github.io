@@ -86,6 +86,11 @@ body {
     ". . .";
 }
 
+.content h2 {
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
 #contentxt {
     height: 100%; 
     width: 100%; 
