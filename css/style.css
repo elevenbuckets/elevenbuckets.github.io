@@ -149,7 +149,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-area: navigation;
-    padding-top: 25px;
+    padding-top: 35px;
     margin: 0 10% 0 50%;
 }
 
@@ -273,7 +273,7 @@ body {
     body {
         max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
-        grid-template-rows: 72px 1fr 56px;
+        grid-template-rows: 200px 8fr 56px;
         grid-template-areas: 
         "topbar"
         "content"
@@ -313,26 +313,28 @@ body {
     }
 
     .logopic {
-        width: 64px;
-        height: 64px;
+        justify-self: center;
+        width: 96px;
+        height: 96px;
         margin: 6px;
     }
 
     .mylogo {
-        grid-template-columns: 1fr;
-        margin: 5px 5px 0 20px;
+        justify-self: center;
     }
 
     .logotext { 
-        display: none; 
+        align-self: center;
+        font-size: 36px;
+        padding-top: 20px;
     }
 
     .topside {
-        grid-template-columns: auto 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
         grid-template-areas: 
-        "logo navigation";
-        grid-gap: 30px;
+        "logo" 
+        "navigation";
     }
 
     .item {
@@ -342,15 +344,67 @@ body {
     .navibar {
         grid-gap: 2px;
         justify-items: center;
-        margin: 0 20px 0 4px;
-        grid-template-columns: 1fr 1fr;
+        margin: 0 10px 0 10px;
         grid-template-rows: repeat(auto-fit, 1fr);
         font-size: 35px;
-        padding-top: 10px;
     }
 
     .navibar div:hover {
         border: 1px solid white;
         background-color: rgba(0, 0, 0, 0.37);
+    }
+}
+
+@media(max-width: 640px) {
+    .mylogo {
+        grid-template-columns: 1fr;
+    }
+
+    .logotext {
+        display: none;
+    }
+
+    .navibar {
+        grid-gap: 2px;
+        justify-items: center;
+        margin: 0 10px 0 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        font-size: 35px;
+    }
+}
+
+@media(max-height: 480px) {
+    body {
+        grid-template-rows: 72px 1fr 56px;
+    }
+
+    .mylogo {
+        grid-template-columns: 1fr;
+    }
+
+    .logopic {
+        width: 64px;
+        height: 64px;
+    }
+
+    .logotext {
+        display: none;
+    }
+
+    .navibar {
+        grid-gap: 2px;
+        justify-items: center;
+        margin: 0 10px 0 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(auto-fit, 1fr);
+        font-size: 35px;
+    }
+
+    .topside {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "logo navigation";
     }
 }
