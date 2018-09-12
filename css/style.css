@@ -30,11 +30,11 @@ body {
    min-height: 100vh;
    margin: 0px;
    grid-template-rows: 110px auto 100px;
-   grid-template-columns: 110px 1fr;
+   grid-template-columns: 110px 1fr 110px;
    grid-template-areas: 
-    "topbar topbar"
-    "content content"
-    "footer footer";
+    "topbar topbar topbar"
+    "content content content"
+    "footer footer footer";
 }
 
 /* Each item in our grid will contain numbers */
@@ -72,17 +72,17 @@ body {
     grid-area: content;
     justify-content: center;
     align-items: center;
-    margin: 10px 50px 10px 50px;
+    margin: 20px 50px 10px 50px;
     font-size: 16px;
     color: white;
     border-radius: 0px;
-    background: rgba(255, 255, 255, 0.21);
-    grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    /*background: rgba(255, 255, 255, 0.21);*/
+    grid-template-columns: 9% 1fr 9%;
+    grid-template-rows: 2% 9fr 1fr;
     grid-template-areas:
-    ". . ." 
+    ". centercontent ." 
     ". centercontent ."
-    ". . .";
+    ". centercontent .";
 }
 
 .content h2 {
@@ -92,17 +92,17 @@ body {
 }
 
 .content #marker {
-    color: #91ff00; 
+    color: #e489af; 
     display: inline;
 }
 
 #contentxt {
     height: 100%; 
-    width: 100%; 
+    width: 98%; 
     font-size: 20px;
     grid-area: centercontent;
     text-align: justify;
-    justify-content: center;
+    justify-self: center;
     align-items: center;
     margin: 0px;
 }
@@ -114,7 +114,7 @@ body {
 }
 
 .structurepic img {
-    width: 75vh;
+    height: 30vh;
 }
 
 .mediaContainer {
@@ -167,10 +167,10 @@ body {
 
 .navibar {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
     grid-area: navigation;
-    padding-top: 30px;
-    margin: 0 10% 0 50%;
+    grid-template-areas: "myhome myabout mydemo mycontact";
+    margin: 30px 1% 0 50%;
 }
 
 .mylogo {
@@ -195,6 +195,7 @@ body {
 }
 
 .myhome {
+    grid-area: myhome;
     display: grid;
     padding: 0 5px 0 5px;
 }
@@ -216,6 +217,7 @@ body {
 }
 
 .myabout {
+    grid-area: myabout;
     display: grid;
     padding: 0 5px 0 5px;
 }
@@ -237,6 +239,7 @@ body {
 }
 
 .mydemo {
+    grid-area: mydemo;
     display: grid;
     padding: 0 5px 0 5px;
 }
@@ -258,6 +261,7 @@ body {
 }
 
 .mycontact {
+    grid-area: mycontact;
     display: grid;
     padding: 0 5px 0 5px;
 }
@@ -304,27 +308,30 @@ body {
     .content {
         text-align: left;
         max-height: 95%;
-        margin: 10px;
-        padding: 20px;
-        padding-right: 17px;
+        margin: 0px;
+        padding: 0 6px 0 6px;
         grid-template-columns: 1fr;
-        grid-template-rows: 5% 1fr 5%;
+        grid-template-rows: 10px 1fr 2%;
         grid-template-areas:
         "." 
         "centercontent"
         ".";
     }
 
-    .content p {
-        text-align: left;
+    .structurepic img {
+        height: auto;
     }
 
-    #contentxt {
+    .content p {
         text-align: left;
     }
 
     .contactinfo {
         margin: 20px;
+    }
+
+    .contactinfo li {
+        font-size: 4.5vw;
     }
 
     .mediaContainer {
@@ -371,7 +378,12 @@ body {
         justify-items: center;
         margin: 0 10px 0 10px;
         grid-template-rows: repeat(auto-fit, 1fr);
-        font-size: 35px;
+        font-size: 45px;
+    }
+
+    .navibar div { 
+        width: 100%;
+        font-size: 25px;
     }
 
     .navibar div:hover {
@@ -380,13 +392,28 @@ body {
     }
 
     .structurepic img {
-        width: 60vw;
+        width: 80vw;
     }
 }
 
 @media(max-width: 640px) {
+    body {
+        grid-template-rows: 150px 1fr 56px;
+    }
+
+    .content {
+        grid-template-rows: 4px 1fr 2%;
+        margin: 0px;
+        padding: 0 6px 0 6px;
+    }
+
+    #contentxt {
+        text-align: left;
+    }
+
+    
     .structurepic img {
-        display: none;
+        width: 95vw;
     }
 
     .mylogo {
@@ -400,16 +427,27 @@ body {
     .navibar {
         grid-gap: 2px;
         justify-items: center;
-        margin: 0 10px 0 10px;
-        grid-template-columns: 1fr 1fr;
+        margin: 15px 10px 0 10px;
+        grid-template-columns: repeat(auto-fill, 1fr);
         grid-template-rows: repeat(auto-fit, 1fr);
         font-size: 35px;
+    }
+
+    .navibar div { 
+        width: 100%;
+        font-size: 16px;
     }
 }
 
 @media(max-height: 480px) {
     body {
         grid-template-rows: 72px 1fr 56px;
+    }
+
+    .content {
+        grid-template-rows: 4px 1fr 2%;
+        margin: 0px;
+        padding: 0 6px 0 6px;
     }
 
     .mylogo {
@@ -429,7 +467,6 @@ body {
         grid-gap: 2px;
         justify-items: center;
         margin: 0 10px 0 10px;
-        grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(auto-fit, 1fr);
         font-size: 35px;
     }
