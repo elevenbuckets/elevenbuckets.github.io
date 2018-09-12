@@ -17,7 +17,7 @@
 			<p class="logotext">ElevenBuckets</p>
 		</div>
 		<div class="navibar">
-			<div class="item myhome"><a href="#" onclick="loadText('About')">Platform</a></div>
+			<div class="item myhome"><a href="#" onclick="loadText('About')">About</a></div>
 		  <div class="item myabout"><a href="#" onclick="loadText('Vision')">Vision</a></div>
 		  <div class="item mydemo"><a href="#" onclick="loadText('Demos')">Demos</a></div>
 		  <div class="item mycontact"><a href="#" onclick="loadText('Contact')">Contact</a></div>
@@ -35,30 +35,34 @@
 					document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
 				  document.getElementById("contentxt").innerHTML = 
 				 `<h2>Decentralized, not merely Blockchain-based</h2>
-				  In reality, dApps require additional off-chain components that work in conjunction with on-chain smart contracts, which are 
-					often outside the scope of the Blockchain peer-to-peer network. Perhaps for the sake of faster time-to-market, many dApps today 
-					choose to build on top of existing web 2.0 infrastructure that provides little or zero decentralization against censorship, 
-					denial-of-service, or any form of attacks against single-point-of-failure of the system.<br><br>
-					In other words, from the full system point-of-view, Blockchain is just one of the many components in dApp architecture. Before 
-					any user data or transactions reaches the Blockchain peer-to-peer network, any centralization in other system components could 
-					defeat the purpose of its adoption: Since Blockchain is essentially cryptographic protection scheme against Byzantine failure 
-					with emphasis on the distributed nature of what it protects. When a dApp choose to expose centralized entrypoint for its users, 
-					the benefits offered by Blockchain cannot cover their actions with the app. <br><br>
-					Instead this design simply benefits the few entities behind dApp operation. Under the "false sense of decentralization", these 
-					entities actually turning themselves into overpowered trusted third parties which all of their dApp users must rely on.`
-			} else if (section === 'About') {
-					document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
-				  document.getElementById("contentxt").innerHTML =
-				 `<h2>Full-stack Web 3.0 done right</h2>
-				 	We introduce a full-stack solution for dApp ecosystem with open source software development kit focusing on seamless integration 
-				  between applications to local full node. This design enables truly peer-to-peer dApp architecture with advantages of ensuring the 
-					trustless, censorship-free ideals of Blockchain being expanded to cover off-chain infrastructure. <br><br> 
+				 	Instead of MetaMask or Infura, we introduce a full-stack solution for dApp ecosystem with open source software development kit 
+					focusing on seamless integration between applications to local full node. This design enables truly peer-to-peer dApp architecture 
+					with advantages of ensuring the trustless, censorship-free ideals of Blockchain being expanded to cover off-chain infrastructure.
+					<br><br><div class="structurepic"><img src="assets/11BE_Structure_WP_web.png"></img></div>
+					<h2>Building proper foundation for Web 3.0</h2>
 					The long-term vision of the platform leads to many expansion of capabilities through pluggable system design that can be realized 
 					over time. Features such as peer-to-peer delegated transaction network, reusable UI libraries, enforced dApp submission with review 
 					process via on-chain release management, can further improve user experiences with consistent user interface as well as fighting 
 					fraud through app reviews and by empowering users to independently verify package metadata recorded in smart contracts. `
+			} else if (section === 'About') {
+					document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
+				  document.getElementById("contentxt").innerHTML =
+				 `<h2>Why did we build 11BE</h2>
+				  Nowadays, we have seen many dApps building on top of existing web 2.0 infrastructure for the sake of faster time-to-market.<br><br>
+					The problem of this approach is that it provides little or zero decentralization against censorship, denial-of-service, or any form 
+					of attacks targeting single-point-of-failure of the system that are inherited from the adoption of existing web infrastructures.
+					It is very ironic to learn that <p id="marker">the very issue "dApps" suppose to solve are still plaguing most of them today, due to inferior 
+					implementation stack of choice.</p>
+					<br><br><br><h2>Fighting against "false sense of decentralization"</h2>
+					From full system point-of-view, every dApp requires additional off-chain components that work in conjunction with on-chain smart contracts. 
+					Before any user data or transactions reach the Blockchain peer-to-peer network, any centralization in other system components could defeat the 
+					purpose of its adoption: Since Blockchain is essentially cryptographic protection scheme against Byzantine failure which emphasis on the 
+					distributed nature of what it protects. When a dApp choose to expose centralized entrypoint for its users, this protection cannot cover their 
+					actions with the app. Instead this design simply benefits the few entities behind dApp operation. <br><br>
+					This is what we called <p id="marker">"false sense of decentralization"</p>, where the entities operating dApps or essential dApp infrastructures
+					turning into overpowered trusted third parties which all of their users must rely on.`
 			} else if (section === 'Demos') {
-				document.getElementById("content").style.backgroundColor = 'rgba(25,255,255,0.21)';
+				document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").innerHTML =
 				`<div class="mediaContainer">
 				<p style="grid-area: vidtitle; color: var(--yellow); font-size: 20px; text-align: center; background-color: rgba(2,2,2,0.24)"> Videos </p>
@@ -98,7 +102,7 @@
 				  </div>
 				</div>`
 			} else if (section === 'Contact') {
-				document.getElementById("content").style.backgroundColor = 'rgba(25,255,255,0.21)';
+				document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").innerHTML =
 				`<ul class="item contactinfo" style="padding: 5% 0 5% 0; font-family: monospace; font-size: 2.0vw;">
 				 <li>Twitter: <a style="text-decoration: none; color: #33aaff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></li>

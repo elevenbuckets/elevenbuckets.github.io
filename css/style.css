@@ -27,7 +27,7 @@ body {
    background-size: 1920px auto; 
    display: grid;
    overflow: hidden;
-   min-height: calc(100vh - 0px);
+   min-height: 100vh;
    margin: 0px;
    grid-template-rows: 110px auto 100px;
    grid-template-columns: 110px 1fr;
@@ -75,11 +75,10 @@ body {
     margin: 10px 50px 10px 50px;
     font-size: 16px;
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.78);
     border-radius: 0px;
     background: rgba(255, 255, 255, 0.21);
     grid-template-columns: 1fr 8fr 1fr;
-    grid-template-rows: 1fr 9fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
     grid-template-areas:
     ". . ." 
     ". centercontent ."
@@ -87,8 +86,14 @@ body {
 }
 
 .content h2 {
+    font-style: italic;
     text-decoration: underline;
     color: var(--yellow);
+}
+
+.content #marker {
+    color: #91ff00; 
+    display: inline;
 }
 
 #contentxt {
@@ -100,6 +105,16 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0px;
+}
+
+.structurepic {
+    justify-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.structurepic img {
+    width: 75vh;
 }
 
 .mediaContainer {
@@ -154,7 +169,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-area: navigation;
-    padding-top: 35px;
+    padding-top: 30px;
     margin: 0 10% 0 50%;
 }
 
@@ -287,6 +302,7 @@ body {
     }
 
     .content {
+        text-align: left;
         max-height: 95%;
         margin: 10px;
         padding: 20px;
@@ -300,6 +316,10 @@ body {
     }
 
     .content p {
+        text-align: left;
+    }
+
+    #contentxt {
         text-align: left;
     }
 
@@ -361,6 +381,10 @@ body {
 }
 
 @media(max-width: 640px) {
+    .structurepic img {
+        display: none;
+    }
+
     .mylogo {
         grid-template-columns: 1fr;
     }
