@@ -23,8 +23,9 @@ html {
 }
   
 body {
-   background: url(/assets/Background.jpg);
-   background-size: 1920px auto; 
+   /*background: url(/assets/Background.jpg);*/
+   background: url(/assets/golden_blockchain.png), linear-gradient(11deg, #9100009a, #0558d4);
+   background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
    min-height: 100vh;
@@ -92,7 +93,7 @@ body {
 }
 
 .content #marker {
-    color: #e489af; 
+    color: #6ff5ff;
     display: inline;
 }
 
@@ -290,7 +291,7 @@ body {
 .footbar {
     display: grid;
     grid-area: footer;
-    background: linear-gradient(180deg, #fafafa07, #08050fd2);
+    background: linear-gradient(180deg, #b1676707, #412d6e57);
 }
 
 @media (max-width: 1280px) {
@@ -302,7 +303,7 @@ body {
         "topbar"
         "content"
         "footer";
-        background-repeat: space;
+        background-repeat: repeat-y;
     }
 
     .content {
