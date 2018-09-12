@@ -386,10 +386,10 @@ body {
         font-size: 25px;
     }
 
-    .navibar div:hover {
+    /* .navibar div:hover {
         border: 1px solid white;
         background-color: rgba(0, 0, 0, 0.37);
-    }
+    } */
 
     .structurepic img {
         width: 80vw;
