@@ -17,10 +17,10 @@
 			<p class="logotext">ElevenBuckets</p>
 		</div>
 		<div class="navibar">
-			<div class="item myhome"><a href="#" onclick="loadText('About')">About</a></div>
-		  <div class="item myabout"><a href="#" onclick="loadText('Vision')">Vision</a></div>
-		  <div class="item mydemo"><a href="#" onclick="loadText('Demos')">Demos</a></div>
-		  <div class="item mycontact"><a href="#" onclick="loadText('Contact')">Contact</a></div>
+			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">About</a></div>
+		  <div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Vision</a></div>
+		  <div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Demos</a></div>
+		  <div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
 		</div>
 	</div>
 	<div class="content" id="content"><p id="contentxt"></p></div>
@@ -109,6 +109,7 @@
 				 <li><p style="display: inline; text-decoration: none; color: #aaaaff">hello_at_elevenbuckets_dot_com</p></li>
 				 </ul>`
 			} else {
+				$('#Vision').focus();
 			  return loadText('Vision');
 			}
 		}
