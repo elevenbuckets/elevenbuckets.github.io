@@ -378,6 +378,10 @@ body {
         border: 1px solid white;
         background-color: rgba(0, 0, 0, 0.37);
     }
+
+    .structurepic img {
+        width: 60vw;
+    }
 }
 
 @media(max-width: 640px) {
