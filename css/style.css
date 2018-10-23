@@ -97,6 +97,16 @@ body {
     display: inline;
 }
 
+.content #clink {
+    font-style: italic;
+    text-decoration: none;
+    color: white;
+}
+
+.content #clink:hover {
+    color: var(--yellow);
+}
+
 .sysmodules {
     font-size: 20px;
 }
