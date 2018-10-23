@@ -98,12 +98,12 @@ body {
 }
 
 .content #clink {
-    font-style: italic;
     text-decoration: none;
     color: white;
 }
 
 .content #clink:hover {
+    font-style: italic;
     color: var(--yellow);
 }
 
