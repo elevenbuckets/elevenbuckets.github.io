@@ -97,6 +97,10 @@ body {
     display: inline;
 }
 
+.sysmodules {
+    font-size: 20px;
+}
+
 #contentxt {
     height: 100%; 
     width: 98%; 
