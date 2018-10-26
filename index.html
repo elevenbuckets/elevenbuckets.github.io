@@ -17,7 +17,7 @@
 			<p class="logotext">ElevenBuckets</p>
 		</div>
 		<div class="navibar">
-			<div class="item myhome"><a id="About" href="assets/MOD-11.pdf">Whitepaper</a></div>
+			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">Whitepaper</a></div>
 		  <div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Vision</a></div>
 		  <div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Demos</a></div>
 		  <div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
@@ -34,7 +34,7 @@
 			if (section === 'Vision') {
 					//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
 				  document.getElementById("contentxt").innerHTML = 
-				 `<h2>Decentralized Applications (dApps) should be:</h2>
+				 `<h2>Decentralized application should be:</h2>
 				 <ul class="item" style="font-size: 26px;">
 					<li> <p id="marker">Independent</p> from service providers such as Etherscan or Infura.</li>
 					<li> <p id="marker">Seamless</p> integration with local full node (geth) and IPFS. </li> 
@@ -46,22 +46,11 @@
 			} else if (section === 'About') {
 					//document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
 				  document.getElementById("contentxt").innerHTML =
-				 `<h2>Why did we build 11BE</h2>
-				  Nowadays, we have seen many dApps building on top of existing web 2.0 infrastructure for the sake of faster time-to-market.<br><br>
-					The problem of this approach is that it provides little or zero decentralization against censorship, denial-of-service, or any form 
-					of attacks targeting single-point-of-failure of the system that are inherited from the adoption of existing web infrastructures.
-					<p id="marker">It is utterly ironic to see that the very issue "dApps" suppose to solve are still plaguing most of them today</p>, due to inferior 
-					implementation: resulting many "decentralized applications" with central gateway and overpowered operators. <p id=marker>At the core of this issue, however, is the lack 
-					of choice when it comes to dapp development stacks</p>. 
-					<br><br><h2>11BE: A solution to the problem</h2>
-					11BE, which stands for <p id="marker">ElevenBuckets Build Environment</p>, offers technical building blocks packed in the form of software sdk with feature rich, 
-					peer-to-peer off-chain infrastructure that <p id=marker>enables developers to explore different level of decentralization for their applications.</p> Whether to connect Apps via local 
-					nodes, or building peer-to-peer state channel with proof-of-stake particapants via smart contracts, 11BE provides highly flexible and extendable APIs for your next dApp projects!
-					<br><br><h2>Powerful platform for user-frendly dApps</h2>
-					11BE solves two main issues of dApps today: proper decentralization that makes them meaningful, and user-friendliness that makes them approachable. Instead of making web-like dApps, 
-					it is our belief that diversifying platform capabilities via modular design brings flexibility for different customers and prevents singularity of the platform to have common 
-					attacking vector. As a result we offer many core system components as separated modules and modeling dApp ecosystem after modern OS package management systems. For details please refer 
-					to our <a id="clink" href="assets/MOD-11.pdf">white paper</a>.`
+				 `<h2>Building blocks of Web3</h2><div style="text-align: justify; font-size: 26px; margin: 12vh 15vh 0 15vh">
+						11BE is merely the first step toward <p id="marker">MOD-11</p>, our grand plan of an open dApp ecosystem, where dApp developers and 11BE node operators comes together
+						to establish a peer-to-peer Layer-2 infrastructure so that <p id="marker">revokable trust, punishable mischief, and independent verification</p> are commonplace and easy for everyone.
+						For more details, please refer to our white paper:</div>
+					<br><br><br><div class="item click"><a href="assets/MOD-11.pdf">Download</a></div>`
 			} else if (section === 'Demos') {
 				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").innerHTML =
