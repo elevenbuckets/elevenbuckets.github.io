@@ -24,7 +24,7 @@ html {
   
 body {
    /*background: url(/assets/Background.jpg);*/
-   background: url(/assets/golden_blockchain.png), linear-gradient(11deg, #9100009a, #0558d4);
+   background: url(/assets/golden_blockchain.png), rgba(1,104,160);
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
@@ -93,7 +93,7 @@ body {
 }
 
 .content #marker {
-    color: #6ff5ff;
+    color: var(--yellow);
     display: inline;
 }
 
@@ -129,7 +129,7 @@ body {
 }
 
 .structurepic img {
-    height: 30vh;
+    height: 40vh;
 }
 
 .mediaContainer {

@@ -17,7 +17,7 @@
 			<p class="logotext">ElevenBuckets</p>
 		</div>
 		<div class="navibar">
-			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">About</a></div>
+			<div class="item myhome"><a id="About" href="assets/MOD-11.pdf">Whitepaper</a></div>
 		  <div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Vision</a></div>
 		  <div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Demos</a></div>
 		  <div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
@@ -34,17 +34,15 @@
 			if (section === 'Vision') {
 					//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
 				  document.getElementById("contentxt").innerHTML = 
-				 `<h2>Decentralized, not merely Blockchain-based</h2>
-				 	Instead of MetaMask or Infura, we introduce open source full-stack solution for dApp ecosystem focusing on seamless integration  
-					to local full node (geth) and IPFS. This design enables truly peer-to-peer dApp architecture with advantages of ensuring the trustless, censorship-free 
-					ideals of Blockchain being expanded to cover off-chain infrastructure.
-					<br><br><div class="structurepic"><img src="assets/11BE_Structure_WP_web.png"></img></div>
-					<h2>Fighting against "false sense of decentralization"</h2>
-					Before any user data or transactions reach Blockchain peer-to-peer network, any centralization in dApp components reduce the benefit of
-					Blockchain, as its cryptographic protection scheme against Byzantine failure heavily emphasis on the distributed nature of what it protects. When a dApp 
-					choose to expose centralized entrypoint, this protection cannot cover any user actions with the app.<br><br>
-					This is what we called <p id="marker">"false sense of decentralization"</p>, where the entities operating dApps or essential dApp infrastructures
-					are turning into overpowered trusted third parties which all of their users must rely on.`
+				 `<h2>Decentralized Applications (dApps) should be:</h2>
+				 <ul class="item" style="font-size: 26px;">
+					<li> <p id="marker">Independent</p> from service providers such as Etherscan or Infura.</li>
+					<li> <p id="marker">Seamless</p> integration with local full node (geth) and IPFS. </li> 
+					<li> <p id="marker">Peer-to-peer</p> architecture without web 2.0 dependencies. </li>
+					<li> <p id="marker">Easy</p> to setup, pleasant to use. </li>
+				 </ul>
+				 <br><div class="structurepic"><img src="assets/11BE_Structure_WP_web.png"></img></div>
+				 <div class="item v1" style="font-size: 28px; font-style: italic;">"Decentralized, not merely Blockchain-based!"</div>`
 			} else if (section === 'About') {
 					//document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
 				  document.getElementById("contentxt").innerHTML =
