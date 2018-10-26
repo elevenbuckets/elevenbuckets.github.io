@@ -107,13 +107,6 @@ body {
     color: var(--yellow);
 }
 
-.wp {
-    justify-content: center; 
-    align-items: center; 
-    font-size: 26px;
-    padding: 0px 20px 0px 20px;
-}
-
 .sysmodules {
     font-size: 20px;
 }
@@ -121,7 +114,7 @@ body {
 #contentxt {
     height: 100%; 
     width: 98%; 
-    font-size: 20px;
+    font-size: 26px;
     grid-area: centercontent;
     text-align: justify;
     justify-self: center;
