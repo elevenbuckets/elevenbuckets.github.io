@@ -114,7 +114,7 @@ body {
 #contentxt {
     height: 100%; 
     width: 98%; 
-    font-size: 26px;
+    font-size: 25px;
     grid-area: centercontent;
     text-align: justify;
     justify-self: center;
