@@ -24,7 +24,7 @@ html {
   
 body {
    /*background: url(/assets/Background.jpg);*/
-   background: url(/assets/golden_blockchain.png), rgba(1,104,160);
+   background: url(/assets/golden_blockchain.png), rgb(1,104,160);
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
