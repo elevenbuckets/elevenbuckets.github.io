@@ -89,6 +89,7 @@ body {
 .content h2 {
     font-style: italic;
     text-decoration: underline;
+    color: var(--yellow);
 }
 
 .content #marker {
