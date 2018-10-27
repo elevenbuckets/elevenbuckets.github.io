@@ -10,6 +10,7 @@
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
 	 crossorigin="anonymous"></script>
 </head>
+
 <body>
 	<div class="topside">
 		<div class="item mylogo">
@@ -18,23 +19,25 @@
 		</div>
 		<div class="navibar">
 			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">Research</a></div>
-		  <div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Vision</a></div>
-		  <div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Demos</a></div>
-		  <div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
+			<div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Vision</a></div>
+			<div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Demos</a></div>
+			<div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
 		</div>
 	</div>
-	<div class="content" id="content"><p id="contentxt"></p></div>
+	<div class="content" id="content">
+		<p id="contentxt"></p>
+	</div>
 	<div class="footbar">
 		<br>
-		<p class="item copyright">©	ElevenBuckets.com	2018.	All rights reserved.</p>
+		<p class="item copyright">© ElevenBuckets.com 2018. All rights reserved.</p>
 	</div>
 
 	<script>
 		function loadText(section) {
 			if (section === 'Vision') {
-					//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
-				  document.getElementById("contentxt").innerHTML = 
-				 `<h2>Decentralized application should be:</h2>
+				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
+				document.getElementById("contentxt").innerHTML =
+					`<h2>Decentralized application should be:</h2>
 				 <ul class="item" style="font-size: 26px;">
 					<li> <p id="marker">Independent</p> from centralized service providers when possible. </li>
 					<li> <p id="marker">Seamless</p> integration with local full nodes (geth + IPFS). </li> 
@@ -42,21 +45,55 @@
 					<li> <p id="marker">Easy</p> to setup, pleasant to use. </li>
 				 </ul>
 				 <div class="structurepic"><img src="assets/11BE_Structure_WP_web.png"></img></div>
-				 <br><div class="item v1" style="font-size: 26px; font-style: italic;">"Decentralized, not merely Blockchain-based!"</div>`
+				 <br>`
+				var s = document.createElement("div");
+				s.setAttribute('id', 'swap-text');
+				document.getElementById("contentxt").appendChild(s);
+				var loopText = [
+					'"Decentralized, not merely Blockchain-based."',
+					'"Trust itself is not evil, asking to give unconfined trust is."',
+					'"Censorship-free is hard, but there is no point to give in."',
+					'"To what degree you would sacrifice performance for privacy?"',
+					'"A peer-to-peer internet can regain controls we lost to big tech companies."'
+				];
+				var i = 0;
+				var max = loopText.length;
+				var $text = $('#swap-text');
+				var css = { "text-align": "center", "font-style": "italic" };
+
+				// Immediately Invoked Named Function Expression - we define it then
+				// immediately call it by the parenthesis after the closing bracket,
+				// function (){}(). Once it has done it's work we call it again with
+				// `setTimeout()` as long as our counter `i` is not equal to the 
+				// number of entries in the `loopText` array.
+				(function changeText() {
+					$text
+						.fadeOut(0)
+						.text(loopText[i++])
+						.css(css)
+						.fadeIn(700);
+
+					setTimeout(changeText, 3700);
+
+					if (i === max) {
+						i = 0
+					}
+				}());
 			} else if (section === 'About') {
-					//document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
-				  document.getElementById("contentxt").innerHTML =
-				 `<h2>Building blocks of Web3</h2><br>
+				//document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
+				document.getElementById("contentxt").innerHTML =
+					`<h2>Building blocks of Web3</h2><br>
 						<div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
-						11BE is the first step toward <p id="marker">MOD-11</p>, an open dApp ecosystem for developers and 11BE node operators join forces
+						11BE* is the first step toward <p id="marker">MOD-11</p>, an open dApp ecosystem for developers and 11BE node operators join forces
 						to establish a peer-to-peer Layer-2 infrastructure where <p id="marker">revokable trust, mischief disincentives, and independent verification</p> 
 						are commonplace and inclusive. For more details, please refer to our white paper:</div>
 					<br><br><br><div class="item click"><a href="assets/MOD-11.pdf">Download</a></div>
-					<br><br><br><div class="item" style="font-size: 26px; font-style: italic;"><ul style="list-style: none;">"Defend all the layers!"  <li style="margin-left: 100px; font-size: 16px;">--- Vlad Zamfir, Web3 Summit 2018</li></ul></div>`
+					<br><br><br><div class="item" style="font-size: 18px;">* 11BE stands for ElevenBuckets Build Environment.</div>
+					<br><br><div class="item" style="font-size: 32px; font-style: italic;"><ul style="list-style: none;">"Defend all the layers!"  <li style="margin-left: 100px; font-size: 16px;">--- Vlad Zamfir, Web3 Summit 2018</li></ul></div>`
 			} else if (section === 'Demos') {
 				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").innerHTML =
-				`<div class="mediaContainer">
+					`<div class="mediaContainer">
 				<p style="grid-area: vidtitle; color: var(--yellow); font-size: 20px; text-align: center; background-color: rgba(2,2,2,0.24)"> Videos </p>
 				 <div class="videoContainer">
 				  <div style="grid-area: vids">
@@ -96,7 +133,7 @@
 			} else if (section === 'Contact') {
 				//document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").innerHTML =
-				`<ul class="item contactinfo" style="padding: 5% 0 5% 0; font-family: monospace; font-size: 2.0vw;">
+					`<ul class="item contactinfo" style="padding: 5% 0 5% 0; font-family: monospace; font-size: 2.0vw;">
 				 <li>Twitter: <a style="text-decoration: none; color: #33aaff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></li>
 				 <li>GitHub: <a style="text-decoration: none; color: rgba(60,60,60,0.8)" href="https://github.com/elevenbuckets">elevenbuckets </a></li>
 				 <li>YouTube: <a style="text-decoration: none; color: rgba(250,10,0,0.8)" href="https://www.youtube.com/channel/UCBlbFcxmAaCEor7SyWCpPPg">elevenbuckets (mod11)</a></li>
@@ -104,7 +141,7 @@
 				 </ul>`
 			} else {
 				$('#Vision').focus();
-			  return loadText('Vision');
+				return loadText('Vision');
 			}
 		}
 
