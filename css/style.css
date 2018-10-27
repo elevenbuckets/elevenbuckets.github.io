@@ -141,10 +141,10 @@ body {
     grid-template-rows: repeat(auto-fill, 1fr);
     grid-template-columns: repeat(auto-fill, 1fr);
     grid-template-areas: 
-      "vidtitle pictitle"
-      "videos pictures"
-      "pmtitle pmtitle"
-      "pminfo pminfo";
+      "vidtitle vidtitle"
+      "videos videos"
+      "pictitle pictitle"
+      "pictures pictures";
     text-align: center;
     grid-gap: 4px;
 }
