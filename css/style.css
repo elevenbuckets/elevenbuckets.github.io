@@ -95,6 +95,7 @@ body {
 .content #marker {
     color: var(--yellow);
     display: inline;
+    font-size: 26px;
 }
 
 .content #clink {
@@ -129,7 +130,7 @@ body {
 }
 
 .structurepic img {
-    height: 36vh;
+    height: 38vh;
 }
 
 .mediaContainer {
