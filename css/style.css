@@ -1,5 +1,5 @@
 :root {
-    --yellow: #ffc600;
+    --yellow: rgb(255,191,0);
     --black: #272727;
     --oak: #910000;
 }
@@ -24,7 +24,7 @@ html {
   
 body {
    /*background: url(/assets/Background.jpg);*/
-   background: url(/assets/golden_blockchain.png), rgb(1,104,160);
+   background: url(/assets/golden_blockchain.png), rgb(0,116,178);
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
