@@ -24,7 +24,7 @@ html {
   
 body {
    /*background: url(/assets/Background.jpg);*/
-   background: url(/assets/golden_blockchain.png), rgb(0,116,178);
+   background: url(/assets/golden_blockchain.png), rgb(51, 63, 70);
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
@@ -89,10 +89,20 @@ body {
 .content h2 {
     font-style: italic;
     text-decoration: underline;
+    font-family: 'san-serif', serif;
     color: var(--yellow);
 }
 
+.content div {
+    font-family: 'san-serif', serif;
+}
+
+.content ul {
+    font-family: 'san-serif', serif;
+}
+
 .content #marker {
+    font-style: italic;
     color: var(--yellow);
     display: inline;
     font-size: 26px;
@@ -309,7 +319,7 @@ body {
 
 .click a:hover {
     background: var(--yellow);
-    color: rgb(1,104,160);
+    color: rgb(51, 63, 70);
 }
 
 .copyright {
