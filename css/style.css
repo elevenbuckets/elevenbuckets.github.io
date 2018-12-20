@@ -63,7 +63,7 @@ body {
     grid-template-areas: 
     "logo navigation";
     grid-area: topbar;
-    background: linear-gradient(180deg, #05040485, #2f08990e);
+    /*background: linear-gradient(180deg, #1b191985, rgba(6, 6, 8, 0.055));*/
 }
 
 .content {
@@ -330,7 +330,7 @@ body {
 .footbar {
     display: grid;
     grid-area: footer;
-    background: linear-gradient(180deg, #b1676707, #412d6e57);
+    /*background: linear-gradient(180deg, #92878707, #25232357);*/
 }
 
 @media (max-width: 1280px) {
