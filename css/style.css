@@ -24,7 +24,7 @@ html {
   
 body {
    /*background: url(/assets/Background.jpg);*/
-   background: url(/assets/golden_blockchain.png), rgb(95, 102, 105);
+   background: url(/assets/golden_blockchain.png), #f4f0fa;
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
@@ -49,7 +49,7 @@ body {
     border-radius: 6px;
     */
     font-size: 27px;
-    color: white;
+    color: #34675c;
 }
   
 .item p {
@@ -75,7 +75,7 @@ body {
     align-items: center;
     margin: 20px 50px 10px 50px;
     font-size: 16px;
-    color: white;
+    color: #34675c;
     border-radius: 0px;
     /*background: rgba(255, 255, 255, 0.21);*/
     grid-template-columns: 9% 1fr 9%;
@@ -110,7 +110,7 @@ body {
 
 .content #clink {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .content #clink:hover {
@@ -239,7 +239,7 @@ body {
 
 .myhome a {
     text-decoration: none;
-    color: white;
+    color: #34675c;
 }
 
 .myabout {
@@ -261,7 +261,7 @@ body {
 
 .myabout a {
     text-decoration: none;
-    color: white;
+    color: #34675c;
 }
 
 .mydemo {
@@ -283,7 +283,7 @@ body {
 
 .mydemo a {
     text-decoration: none;
-    color: white;
+    color: #34675c;
 }
 
 .mycontact {
@@ -305,7 +305,7 @@ body {
 
 .mycontact a {
     text-decoration: none;
-    color: white;
+    color:#34675c;
 }
 
 .click a {
@@ -319,7 +319,7 @@ body {
 
 .click a:hover {
     background: var(--yellow);
-    color: rgb(51, 63, 70);
+    color: #f4f0fa;
 }
 
 .copyright {
