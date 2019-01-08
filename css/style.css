@@ -1,5 +1,5 @@
 :root {
-    --yellow: rgb(255,191,0);
+    --yellow: #ff4200;;
     --black: #272727;
     --oak: #910000;
 }
@@ -49,7 +49,7 @@ body {
     border-radius: 6px;
     */
     font-size: 27px;
-    color: #34675c;
+    color: #34475c;
 }
   
 .item p {
@@ -75,7 +75,7 @@ body {
     align-items: center;
     margin: 20px 50px 10px 50px;
     font-size: 16px;
-    color: #34675c;
+    color: #34475c;
     border-radius: 0px;
     /*background: rgba(255, 255, 255, 0.21);*/
     grid-template-columns: 9% 1fr 9%;
@@ -239,7 +239,7 @@ body {
 
 .myhome a {
     text-decoration: none;
-    color: #34675c;
+    color: #34475c;
 }
 
 .myabout {
@@ -261,7 +261,7 @@ body {
 
 .myabout a {
     text-decoration: none;
-    color: #34675c;
+    color: #34475c;
 }
 
 .mydemo {
@@ -283,7 +283,7 @@ body {
 
 .mydemo a {
     text-decoration: none;
-    color: #34675c;
+    color: #34475c;
 }
 
 .mycontact {
@@ -305,7 +305,7 @@ body {
 
 .mycontact a {
     text-decoration: none;
-    color:#34675c;
+    color:#34475c;
 }
 
 .click a {
