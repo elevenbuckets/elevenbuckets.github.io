@@ -26,7 +26,7 @@
 		<div class="navibar">
 			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">Vision</a></div>
 			<div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Platform</a></div>
-			<div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Demos</a></div>
+			<div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Join</a></div>
 			<div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
 		</div>
 	</div>
@@ -35,7 +35,7 @@
 	</div>
 	<div class="footbar">
 		<br>
-		<p class="item copyright">© ElevenBuckets.com 2018. All rights reserved.</p>
+		<p class="item copyright">© ElevenBuckets.com 2019. All rights reserved.</p>
 	</div>
 
 	<script>
@@ -97,37 +97,58 @@
 					<br><br><br><div class="item" style="font-size: 32px; font-style: italic;"><ul style="list-style: none;">"Defend all the layers!"  <li style="margin-left: 100px; font-size: 16px;">--- Vlad Zamfir, Web3 Summit 2018</li></ul></div>`
 			} else if (section === 'Demos') {
 				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
-				document.getElementById("contentxt").innerHTML =
-					`<div class="mediaContainer">
-				<p style="grid-area: vidtitle; color: var(--yellow); font-size: 20px; text-align: center; background-color: rgba(2,2,2,0.24)"> Videos </p>
-				 <div class="videoContainer">
-				  <div style="grid-area: vids">
-				   <iframe style="width: 44vw; height: 24.7vw;" 
-				             src="https://www.youtube.com/embed/rNDuPH9iAA0?start=30" 
-						frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-				   </iframe>
-				  </div>
-				 </div>
-				<p style="grid-area: pictitle; font-size: 20px; color: var(--yellow); text-align: center; background-color: rgba(2,2,2,0.24)"> Release Soon! </p>
-				  <div class="picContainer">
-					<div style="grid-area: pics;">
-					<a href="./assets/screenshot01.png">
-					  <img src="./assets/s01thumb.png" title="Tx job queue (click to enlarge)" />
-					</a>
-					<a href="./assets/screenshot02.png">
-					  <img src="./assets/s02thumb.png" title="Tx job queue (click to enlarge)" />
-					</a>
-					<a href="./assets/screenshot03.png">
-					  <img src="./assets/s03thumb.png" title="Minimal Tx interuption (click to enlarge)" />
-					</a>
-					<a href="./assets/screenshot04.png">
-					  <img src="./assets/s04thumb.png" title="Tx receipts view (click to enlarge)" />
-					</a>
-					<a href="./assets/screenshot05.png">
-					  <img src="./assets/s05thumb.png" title="Direct connection to local geth and IPFS (click to enlarge)" />
-					</a>
-				  </div>
-				</div>`
+				//document.getElementById("contentxt").innerHTML =`<h2 style="grid-area: vidtitle">Screenshots & Videos</h2>`
+				document.getElementById("contentxt").innerHTML = '';
+				var d = document.createElement("div");
+				d.setAttribute('class', 'mediaContainer');
+				d.setAttribute('id', 'mediaContainer');
+				document.getElementById("contentxt").appendChild(d);
+				document.getElementById("contentxt").style.overflow = 'hidden';
+
+				var m = document.createElement("div");
+				m.setAttribute('class', 'videoContainer');
+				d.appendChild(m);
+				var b = document.createElement('img');
+				b.setAttribute('id', 'swap-media');
+
+				var t = document.createElement('div');
+				t.setAttribute('id', 'media-intro');
+				m.appendChild(t);
+				m.appendChild(b);
+				
+				var j = 0;
+				var $media = $('#swap-media');
+				var $intro = $('#media-intro');
+
+				var loopMedia = [
+					'/assets/screenshot01.png',
+					'/assets/screenshot02.png',
+					'/assets/screenshot03.png',
+					'/assets/screenshot04.png',
+					'/assets/screenshot05.png'
+				];
+
+				var loopIntro = [
+					'Be the platform of next Internet',
+					'11BE: Be The Platform',
+					'Decentralized, Not merely Blockchain-based',
+					'11BE: dApp platform made simple for you',
+					'Enpowering everyone to power the new web'
+				];
+
+				(function changeMedia() {
+					$intro
+						.html(`<p style="min-width: 92vw; color: white; text-align: right; margin: 4vh 10vw 0 1vw">${loopIntro[j]}</p><div style="padding: 2vh 4vw 10vh 85vw; width: 100vw;" class="item click"><a href="https://github.com/elevenbuckets"> Explore </a></div>`);
+
+					$media	
+						.fadeOut(50)
+						.attr('src', loopMedia[j++])
+						.fadeIn(700);
+
+					//setTimeout(changeMedia, 7000);
+					
+					if(j == loopMedia.length) { j = 0; }
+				}())
 			} else if (section === 'Contact') {
 				//document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").innerHTML =
@@ -138,8 +159,8 @@
 				 <li><p style="display: inline; text-decoration: none; color: #aaaaff">hello_at_elevenbuckets_dot_com</p></li>
 				 </ul>`
 			} else {
-				$('#About').focus();
-				return loadText('About');
+				$('#Demos').focus();
+				return loadText('Demos');
 			}
 		}
 
