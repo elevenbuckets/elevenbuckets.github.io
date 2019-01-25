@@ -42,6 +42,7 @@
 		function loadText(section) {
 			if (section === 'Vision') {
 				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
+				document.getElementById("contentxt").style.margin = '10px';
 				document.getElementById("contentxt").innerHTML =
 					`<h2>Join us and be the platform of the new web</h2>
 				 <ul class="item" style="font-size: 26px;">
@@ -85,8 +86,10 @@
 						i = 0
 					}
 				}());
+				document.getElementsByClassName("content")[0].style.overflowY = 'auto';
 			} else if (section === 'About') {
 				//document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
+				document.getElementById("contentxt").style.margin = '10px';
 				document.getElementById("contentxt").innerHTML =
 					`<h2>Building a new web of freedom and respect</h2><br>
 						<div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
@@ -95,15 +98,17 @@
 						We aim to greatly limit any entities from censoring or surveilling user activities and bring back the freedom to the connected world.</div>
 						<br><br><br><div class="item click"><a href="assets/MOD-11.pdf">Learn More</a></div>
 					<br><br><br><div class="item" style="font-size: 32px; font-style: italic;"><ul style="list-style: none;">"Defend all the layers!"  <li style="margin-left: 100px; font-size: 16px;">--- Vlad Zamfir, Web3 Summit 2018</li></ul></div>`
+				document.getElementsByClassName("content")[0].style.overflowY = 'auto';
 			} else if (section === 'Demos') {
 				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
 				//document.getElementById("contentxt").innerHTML =`<h2 style="grid-area: vidtitle">Screenshots & Videos</h2>`
+				document.getElementById("contentxt").style.margin = '0px';
+				document.getElementById("contentxt").style.overflow = 'hidden';
 				document.getElementById("contentxt").innerHTML = '';
 				var d = document.createElement("div");
 				d.setAttribute('class', 'mediaContainer');
 				d.setAttribute('id', 'mediaContainer');
 				document.getElementById("contentxt").appendChild(d);
-				document.getElementById("contentxt").style.overflow = 'hidden';
 
 				var m = document.createElement("div");
 				m.setAttribute('class', 'videoContainer');
@@ -149,8 +154,10 @@
 					
 					if(j == loopMedia.length) { j = 0; }
 				}())
+				document.getElementsByClassName("content")[0].style.overflow = 'hidden';
 			} else if (section === 'Contact') {
 				//document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
+				document.getElementById("contentxt").style.margin = '10px';
 				document.getElementById("contentxt").innerHTML =
 					`<ul class="item contactinfo" style="padding: 5% 0 5% 0; font-family: monospace; font-size: 2.0vw;">
 				 <li>Twitter: <a style="text-decoration: none; color: #33aaff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></li>
@@ -158,9 +165,10 @@
 				 <li>YouTube: <a style="text-decoration: none; color: rgba(250,10,0,0.8)" href="https://www.youtube.com/channel/UCBlbFcxmAaCEor7SyWCpPPg">elevenbuckets (mod11)</a></li>
 				 <li><p style="display: inline; text-decoration: none; color: #aaaaff">hello_at_elevenbuckets_dot_com</p></li>
 				 </ul>`
+				 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
 			} else {
-				$('#Demos').focus();
-				return loadText('Demos');
+				$('#About').focus();
+				return loadText('About');
 			}
 		}
 
