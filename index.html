@@ -104,56 +104,17 @@
 				//document.getElementById("contentxt").innerHTML =`<h2 style="grid-area: vidtitle">Screenshots & Videos</h2>`
 				document.getElementById("contentxt").style.margin = '0px';
 				//document.getElementById("contentxt").style.overflow = 'hidden';
-				document.getElementById("contentxt").innerHTML = '';
-				var d = document.createElement("div");
-				d.setAttribute('class', 'mediaContainer');
-				d.setAttribute('id', 'mediaContainer');
-				document.getElementById("contentxt").appendChild(d);
-
-				var m = document.createElement("div");
-				m.setAttribute('class', 'videoContainer');
-				d.appendChild(m);
-				var b = document.createElement('img');
-				b.setAttribute('id', 'swap-media');
-
-				var t = document.createElement('div');
-				t.setAttribute('id', 'media-intro');
-				m.appendChild(t);
-				m.appendChild(b);
+				document.getElementById("contentxt").innerHTML = `<div class="mediaContainer">
+					<div class="videoContainer"><Video autoplay="autoplay" loop="loop" style="margin-left: 6vw;width: 78vw;">
+						<source src="/assets/screenplay.webm"/>
+						</Video>
+						<div id="media-intro">
+							<p style="min-width: 92vw; color: #ffffff; text-align: right; margin: 4vh 10vw 0 1vw">Be the platform of next Internet!</p>
+							<div style="padding: 2vh 4vw 10vh 65vw; width: 100vw;" class="item click"><a href="https://github.com/elevenbuckets"> Explore </a></div>
+						</div>
+					</div>
+				</div>`;
 				
-				var j = 0;
-				var $media = $('#swap-media');
-				var $intro = $('#media-intro');
-
-				var loopMedia = [
-					'/assets/screenshot01.png',
-					'/assets/screenshot02.png',
-					'/assets/screenshot03.png',
-					'/assets/screenshot04.png',
-					'/assets/screenshot05.png'
-				];
-
-				var loopIntro = [
-					'Be the platform of next Internet',
-					'11BE: Be The Platform',
-					'Decentralized, Not merely Blockchain-based',
-					'11BE: dApp platform made simple for you',
-					'Enpowering everyone to power the new web'
-				];
-
-				(function changeMedia() {
-					$intro
-						.html(`<p style="min-width: 92vw; color: white; text-align: right; margin: 4vh 10vw 0 1vw">${loopIntro[j]}</p><div style="padding: 2vh 4vw 10vh 65vw; width: 100vw;" class="item click"><a href="https://github.com/elevenbuckets"> Explore </a></div>`);
-
-					$media	
-						.fadeOut(50)
-						.attr('src', loopMedia[j++])
-						.fadeIn(700);
-
-					//setTimeout(changeMedia, 7000);
-					
-					if(j == loopMedia.length) { j = 0; }
-				}())
 				document.getElementsByClassName("content")[0].style.overflow = 'hidden';
 			} else if (section === 'Contact') {
 				//document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';

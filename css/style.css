@@ -175,6 +175,7 @@ body {
 }
 
 .videoContainer {
+    background-color: #290020;
     justify-items: center;
     align-self: center;
     display: block;
