@@ -19,7 +19,7 @@
 
 <body>
 	<div class="topside">
-		<div class="item mylogo">
+		<div class="item mylogo"> 
 			<img class="logopic" src="assets/logo.png" width="64" height="64">
 			<p class="logotext">ElevenBuckets</p>
 		</div>
@@ -27,14 +27,16 @@
 			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">Vision</a></div>
 			<div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Platform</a></div>
 			<div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Join</a></div>
-			<div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">Contact</a></div>
+			<div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">About</a></div>
 		</div>
 	</div>
 	<div class="content" id="content">
 		<p id="contentxt"></p>
 	</div>
-	<div class="footbar">
-		<br>
+	<div class="footbar">		
+		<a style="grid-area: twitter; margin-top: 20px; text-align: right; text-decoration: none; color: #33aaff" href="https://twitter.com/elevenbuckets"><img style="width:28px;" src="assets/twitter.png"/></a>
+		<a style="grid-area: github; margin-top: 20px;  text-align: center; text-decoration: none; color: black;" href="https://github.com/elevenbuckets"><img style="width:28px;" src="assets/github.png"/></a>
+		<a style="grid-area: youtube; margin-top: 20px; text-align: left; text-decoration: none; color: rgba(250,10,0,0.8)" href="https://www.youtube.com/channel/UCBlbFcxmAaCEor7SyWCpPPg"><img style="width:28px;" src="assets/youtube.png"/></a>
 		<p class="item copyright">© ElevenBuckets.com 2019. All rights reserved.</p>
 	</div>
 
@@ -122,12 +124,16 @@
 				//document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
 				document.getElementById("contentxt").style.margin = '10px';
 				document.getElementById("contentxt").innerHTML =
-					`<ul class="item contactinfo" style="padding: 5% 0 5% 0; font-family: monospace; font-size: 2.0vw;">
-				 <li>Twitter: <a style="text-decoration: none; color: #33aaff" href="https://twitter.com/elevenbuckets">@elevenbuckets</a></li>
-				 <li>GitHub: <a style="text-decoration: none; color: black;" href="https://github.com/elevenbuckets">elevenbuckets </a></li>
-				 <li>YouTube: <a style="text-decoration: none; color: rgba(250,10,0,0.8)" href="https://www.youtube.com/channel/UCBlbFcxmAaCEor7SyWCpPPg">elevenbuckets (mod11)</a></li>
-				 <li><p style="display: inline; text-decoration: none; color: #aaaaff">hello_at_elevenbuckets_dot_com</p></li>
-				 </ul>`
+					`<h2>About ElevenBuckets</h2><br>
+						<div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
+						ElevenBuckets is formed by small group of developers fascinated by the potential of programmable Blockchain and decentralized application.<br><br>
+						Since early 2017, we have been working on software solutions to realize our vision of the technology. <p id="marker">It is our belief that the true value 
+						and challenge of Blockchain is to achieve mass adoption without sacrificing its peer-to-peer nature.</p> Any introduction of central gateways
+						via conventional web 2.0 services will reduce the benefit of this technology.<br><br>
+						In order to counter common perception of the necessity and usability on decentralization, we introduce <p id="marker">Eleven Buckets Environment (11BE)</p>,
+						the core technology that combines our expertise to offer best of both worlds: ease-of-use with real decentralization. We believe that 11BE can 
+						offer cost-effective real-world application while safeguarding user freedom and privacy by expanding the decentralized nature beyond Blockchain peer-to-peer.
+						</div>`
 				 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
 			} else {
 				$('#Demos').focus();

@@ -330,11 +330,18 @@ body {
 .copyright {
     font-size: 14px;
     text-align: center;
+    grid-area: copyright;
 }
 
 .footbar {
     display: grid;
     grid-area: footer;
+    grid-template-columns: 1fr 250px 100px 250px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        ". twitter github youtube ."
+        ". copyright copyright copyright .";
+    z-index: 301;
     /*background: #25232311;*/
 }
 
@@ -342,7 +349,7 @@ body {
     body {
         max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 8fr 56px;
+        grid-template-rows: 200px 8fr 90px;
         grid-template-areas: 
         "topbar"
         "content"
@@ -465,7 +472,7 @@ body {
 
 @media(max-width: 800px) {
     body {
-        grid-template-rows: 150px 1fr 56px;
+        grid-template-rows: 150px 1fr 90px;
     }
 
     .content {
@@ -522,7 +529,7 @@ body {
 
 @media(max-height: 768px) {
     body {
-        grid-template-rows: 72px 1fr 56px;
+        grid-template-rows: 72px 1fr 90px;
     }
 
     .navibar div {
