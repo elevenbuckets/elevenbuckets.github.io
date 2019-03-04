@@ -136,12 +136,14 @@ body {
 }
 
 #media-intro {
-    display: block; 
-    box-shadow: 5vw 9vh #27272777;
+    display: block;
+    border-top-right-radius:  13em;
+    border-bottom-right-radius: 13em; 
+    /*box-shadow: 11vw 9vh #27272777;*/
 	position: fixed; 
 	z-index: 300;
-	bottom: 9vh; 
-	right: 5vw; 
+	bottom: 9.5vh; 
+	right: 15vw; 
 	width: 100vw; 
 	height: 11vh; 
     background: #34475c;
@@ -342,7 +344,7 @@ body {
         ". twitter github youtube ."
         ". copyright copyright copyright .";
     z-index: 301;
-    /*background: #25232311;*/
+    /*background: #27272711;*/
 }
 
 @media (max-width: 1280px) {
@@ -381,7 +383,7 @@ body {
     }
 
     #media-intro {
-        box-shadow: 5vw 9vh #27272777;
+        /*box-shadow: 15vw 9vh #27272777;*/
         top: 52vh;    
         height: 11vh;    
         min-width: 100vw;
@@ -492,12 +494,12 @@ body {
     }
 
     #media-intro {
-        top: 50vh;        
+        top: 47vh;        
         max-width: 100vw;
         font-size: 0.9em;
         height: 11vh;
         padding-right: 5vw;
-        box-shadow: 5vw 9vh #27272777;
+        /*box-shadow: 15vw 9vh #27272777;*/
     }
     
     .structurepic img {
@@ -540,6 +542,10 @@ body {
         grid-template-rows: 4px 1fr 2%;
         margin: 0px;
         padding: 0 6px 0 6px;
+    }
+
+    #media-intro {
+        top: 60vh;
     }
 
     #swap-media {
