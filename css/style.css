@@ -30,7 +30,7 @@ body {
    overflow: hidden;
    min-height: 100vh;
    margin: 0px;
-   grid-template-rows: 110px auto 100px;
+   grid-template-rows: 50px auto 100px;
    grid-template-columns: 110px 1fr 110px;
    grid-template-areas: 
     "topbar topbar topbar"
@@ -315,18 +315,22 @@ body {
     color:#34475c;
 }
 
+.w3-animate-opacity{animation:opac 1.5s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
 .click a {
-    border: 2px solid var(--yellow); 
+    border: 2px solid var(--black); 
     font-size: 22px; 
     background: none; 
-    color: var(--yellow);
+    color: var(--black);
     padding: 2px 6px;
     text-decoration: none;
 }
 
 .click a:hover {
-    background: var(--yellow);
+    background: var(--black);
     color: #f4f0fa;
+    cursor: pointer;
 }
 
 .copyright {

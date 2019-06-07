@@ -2,145 +2,156 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<title>ElevenBuckets: Be The Platform</title>
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="icon" type="image/png" href="assets/favicon.png" />
-	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
-	<script src="https://code.jquery.com/jquery-2.1.4.min.js" integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
-	 crossorigin="anonymous"></script>
-	<script>
-         var host = "11be.org"
-	 if (window.location.host == host && window.location.protocol != "https:") {
-  		window.location.protocol = "https:"
-	 }
-	</script>
+    <meta charset="UTF-8">
+    <title>11BE</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
+        integrity="sha384-R4/ztc4ZlRqWjqIuvf6RX5yb/v90qNGx6fS48N0tRxiGkqveZETq72KgDVJCp2TC"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js"
+        integrity="sha384-8pSX3eczxV4Ar9yR+L64/VUIbc7rozF5fx6Xu1Bzqtojx5bh/afqyGUNqutMsd4t"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-	<div class="topside">
-		<div class="item mylogo"> 
-			<img class="logopic" src="assets/logo.png" width="64" height="64">
-			<p class="logotext">ElevenBuckets</p>
-		</div>
-		<div class="navibar">
-			<div class="item myhome"><a id="About" href="#" onclick="loadText('About')">Platform</a></div>
-			<div class="item myabout"><a id="Vision" href="#" onclick="loadText('Vision')">Design</a></div>
-			<div class="item mydemo"><a id="Demos" href="#" onclick="loadText('Demos')">Join</a></div>
-			<div class="item mycontact"><a id="Contact" href="#" onclick="loadText('Contact')">About</a></div>
-		</div>
-	</div>
-	<div class="content" id="content">
-		<p id="contentxt"></p>
-	</div>
-	<div class="footbar">		
-		<div style="grid-area: twitter; margin-top: 20px; text-align: right; text-decoration: none; color: #33aaff" ><a href="https://twitter.com/elevenbuckets"><img style="width:28px;" src="assets/twitter.png"></a></div>
-		<div style="grid-area: github; margin-top: 20px;  text-align: center; text-decoration: none; color: black;" ><a href="https://github.com/elevenbuckets"><img style="width:28px;" src="assets/github.png"></a></div>
-		<div style="grid-area: youtube; margin-top: 20px; text-align: left; text-decoration: none; color: rgba(250,10,0,0.8)"><a href="https://www.youtube.com/channel/UCBlbFcxmAaCEor7SyWCpPPg"><img style="width:28px;" src="assets/youtube.png"></a></div>
-		<p class="item copyright">© 11BE.ORG 2018-2019. All rights reserved.</p>
-	</div>
+    <div class="topside"></div>
+    <div class="content" id="content">
+        <p id="contentxt"></p>
+    </div>
+    <div class="footbar">
+        <div style="grid-area: twitter; margin-top: 20px; text-align: right; text-decoration: none; color: #33aaff"><a
+                href="https://twitter.com/elevenbuckets"><img style="width:28px;" src="assets/twitter.png"></a></div>
+        <div style="grid-area: github; margin-top: 20px;  text-align: center; text-decoration: none; color: black;"><a
+                href="https://github.com/elevenbuckets"><img style="width:28px;" src="assets/github.png"></a></div>
+        <div
+            style="grid-area: youtube; margin-top: 20px; text-align: left; text-decoration: none; color: rgba(250,10,0,0.8)">
+            <a href="https://www.youtube.com/channel/UCBlbFcxmAaCEor7SyWCpPPg"><img style="width:28px;"
+                    src="assets/youtube.png"></a></div>
+        <div class="item copyright">
+            <p>© Optract LLC. 2019. All Rights Reserved.
+        </div>
+    </div>
+    <script>
+        var t1;
+        var t2;
+        function loadText(section) {
+            if (section === 'Vision') {
+                document.getElementById("contentxt").style.textAlign = "center";
+                var pre = document.createElement('div');
+                pre.setAttribute('class', 'item w3-animate-fading');
+                pre.style.display = 'block';
+                pre.style.textAlign = 'center';
+                pre.style.minWidth = "600px";
+                pre.style.marginTop = '35vh';
+                pre.innerHTML = `<p style="display: inline; font-size: 2.5em;">Team
+                                 <img src="./assets/11be_logo_reverse.png" style="display: inline-block; width: 100px; height: 100px; vertical-align: text-bottom;"/>
+                                  presents </p>`;
+                document.getElementById('contentxt').appendChild(pre);
+                t1 = setTimeout(function () { pre.innerHTML = '<p style="font-size: 2.5em">Optract</p>' }, 10000);
+                t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 20000)
+            } else if (section === 'Demos') {
+                document.getElementById("contentxt").style.textAlign = "center";
+                document.getElementById("contentxt").innerHTML = `
+                <p id="tagline" style="position: absolute; left:33.5%; top: 35%; font-size: 1.2em;">
+                    Optract is <span class="typed" id="marker" style="font-size: 1.0em;"></span>
+                </p>`
+                var deck = document.createElement('div');
+                deck.setAttribute('id', 'deck');
+                deck.setAttribute('class', 'item click w3-animate-opacity');
+                deck.style.display = 'inline-block';
+                deck.style.marginTop = '42vh';
+                deck.style.marginRight = '30px';
+                deck.innerHTML = `<a onclick=loadText('Learn')>Learn More</a>`;
+                document.getElementById('contentxt').appendChild(deck);
 
-	<script>
-		function loadText(section) {
-			if (section === 'Vision') {
-				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
-				document.getElementById("contentxt").style.margin = '10px';
-				document.getElementById("contentxt").innerHTML =
-					`<h2>The Platform That Makes SPACE for ALL</h2>
-				 <div style="margin-top: 45px;"><ul class="item" style="font-size: 26px;">
-					<li> <p id="marker">Scalable</p> with Plasma-inspired side-chain. </li>
-				    <li> <p id="marker">Peer-to-peer</p> network with maximum service uptime. </li>
-					<li> <p id="marker">Augmented</p> websites with Layer-2 interconnects. </li>
-					<li> <p id="marker">Customizable</p> with multi-tier degree of trusts. </li> 
-					<li> <p id="marker">Easy</p> to setup from browsers or dedicated client. </li>
-				 </ul></div>
-				 <div class="structurepic"><img src="assets/11BE_Structure_WP_web.png"></img></div>
-				 <br>`
-				var s = document.createElement("div");
-				s.setAttribute('id', 'swap-text');
-				document.getElementById("contentxt").appendChild(s);
-				var loopText = [
-					'"Decentralized, not merely Blockchain-based."',
-					'"Trust is not evil, but unconfined trust is."',
-					'"Censorship-resistance is essential online freedom."',
-					'"Privacy matters, even if you have nothing to hide."',
-					'"Peer-to-peer: unus pro omnibus, omnes pro uno."'
-				];
-				var i = 0;
-				var max = loopText.length;
-				var $text = $('#swap-text');
-				var css = { "text-align": "center", "font-size": "30px", "font-style": "italic" };
+                var team = document.createElement('div');
+                team.setAttribute('id', 'team');
+                team.setAttribute('class', 'item click w3-animate-opacity');
+                team.style.display = 'inline-block';
+                team.innerHTML = `<a onclick=loadText('Contact')>About Us</a>`;
+                document.getElementById('contentxt').appendChild(team);
 
-				// Immediately Invoked Named Function Expression - we define it then
-				// immediately call it by the parenthesis after the closing bracket,
-				// function (){}(). Once it has done it's work we call it again with
-				// `setTimeout()` as long as our counter `i` is not equal to the 
-				// number of entries in the `loopText` array.
-				(function changeText() {
-					$text
-						.fadeOut(0)
-						.text(loopText[i++])
-						.css(css)
-						.fadeIn(700);
+                $(function () {
+                    $(".typed").typed({
+                        strings: ["blockchain consensus.", "collective intelligence.",
+                            "curation value network.", "effective lifelong learning."],
+                        // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
+                        stringsElement: null,
+                        // typing speed
+                        typeSpeed: 30,
+                        // time before typing starts
+                        startDelay: 1200,
+                        // backspacing speed
+                        backSpeed: 10,
+                        // time before backspacing
+                        backDelay: 1500,
+                        // loop
+                        loop: true,
+                        // false = infinite
+                        loopCount: false,
+                        // show cursor
+                        showCursor: false,
+                        // character for cursor
+                        cursorChar: "|",
+                        // attribute to type (null == text)
+                        attr: null,
+                        // either html or text
+                        contentType: 'html',
+                        // call when done callback function
+                        callback: function () { },
+                        // starting callback function before each string
+                        preStringTyped: function () { },
+                        //callback for every typed string
+                        onStringTyped: function () { },
+                        // callback for reset
+                        resetCallback: function () { }
+                    });
+                });
 
-					setTimeout(changeText, 100 * loopText[i-1].length);
+                //document.getElementsByClassName("content")[0].style.overflow = 'hidden';
+            } else if (section === 'Contact') {
+                //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
+                document.getElementById("contentxt").style.textAlign = 'justify';
+                document.getElementById("contentxt").style.margin = '10px';
+                document.getElementById("contentxt").innerHTML =
+                    `<h2 style="text-align: center;">Our Story</h2><br>
+                                <div style="padding: 0px 6vw 0px 6vw; font-size: 22px;">
+                                Since late 2016, a small group of developers based in Boulder, Colorado set out to explore real-world use cases of 
+                                programmable blockchain. Our research focuses on releasing great potential of the technology beyond 
+                                financial applications. <br><br>
+                                Previously known as <p style="font-size: 22px;" id="marker">"11BE"</p>, our three-men team combined their expertise 
+                                and created the core development stack integrated with Ethereum blockchain. To help achieving better scalability, we 
+                                began applying our work to build an open layer-2 solution from scratch. In 2019, <p style="font-size: 22px;" id="marker">
+                                Optract</p> was born to put all of our research results into building a truly unique blockchain application. 
+                                <br><br><br>
+                                <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
+                            </div>`
+                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+            } else if (section === 'Learn') {
+                //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
+                document.getElementById("contentxt").style.textAlign = 'justify';
+                document.getElementById("contentxt").style.margin = '10px';
+                document.getElementById("contentxt").innerHTML =
+                    `<h2 style="text-align: center;">Optract: A Curation Value Network.</h2><br>
+                                <div style="padding: 0px 6vw 0px 6vw; font-size: 22px;">
+                                Optract is a new kind of blockchain that utilizes <p id="marker">collective intelligence</p> at the core of its concensus with
+                                the goal of providing bias-free content curation. <br><br> 
+                                Aimming to become a new kind of social network focusing on "What" instead of "Who", Optract offers content curation beyond personalization, 
+                                and facilitates easy-to-use environment for curation-driven group learning to address the ever-growing depands on 
+                                lifelong learning and combat information overload of the Internet today.
+                                <br><br><br>
+                                <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
+                            </div>`
+                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+            } else {
+                return loadText('Vision');
+            }
+        }
 
-					if (i === max) {
-						i = 0
-					}
-				}());
-				document.getElementsByClassName("content")[0].style.overflowY = 'auto';
-			} else if (section === 'About') {
-				//document.getElementById("content").style.backgroundColor = 'rgba(5,20,24,0.21)';
-				document.getElementById("contentxt").style.margin = '10px';
-				document.getElementById("contentxt").innerHTML =
-					`<h2>Rebuild Equilibrium for The Internet</h2><br>
-						<div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
-						ElevenBuckets Environment (11BE) is created to foster proper utilization of Blockchain technologies in real-world applications.
-						By infusing off-chain states with smart contracts, it not only offers an unique scalability solution for current Blockchains,
-						but also reducing unintentional power from intermediaries or centralized authorities.  
-						</div>
-						<br><br><br><br>
-					<br><br><br><div class="item" style="font-size: 32px; font-style: italic;"><ul style="list-style: none;">"Defend all the layers!"  <li style="margin-left: 100px; font-size: 16px;">--- Vlad Zamfir, Web3 Summit 2018</li></ul></div>`
-				document.getElementsByClassName("content")[0].style.overflowY = 'auto';
-			} else if (section === 'Demos') {
-				//document.getElementById("content").style.backgroundColor = 'rgba(255,255,255,0.11)';
-				//document.getElementById("contentxt").innerHTML =`<h2 style="grid-area: vidtitle">Screenshots & Videos</h2>`
-				document.getElementById("contentxt").style.marginTop = '2vh';
-				//document.getElementById("contentxt").style.overflow = 'hidden';
-				document.getElementById("contentxt").innerHTML = `<div class="mediaContainer">
-					<div class="videoContainer"><Video autoplay="autoplay" loop playsinline style="margin-left: 6vw;width: 85vw;">
-						<source src="/assets/screenplay.webm"/>
-						<source src="/assets/screenplay.mp4"/>
-						<img src="/assets/screenshot01.png" />
-						</Video>
-						<div id="media-intro">
-							<div style="margin: 4vh 4vw 4vh 42vw; width: 84vw;" class="item click"><a href="https://github.com/elevenbuckets"> Be The Platform </a></div>
-						</div>
-					</div>
-				</div>`;
-				
-				document.getElementsByClassName("content")[0].style.overflow = 'hidden';
-			} else if (section === 'Contact') {
-				//document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
-				document.getElementById("contentxt").style.margin = '10px';
-				document.getElementById("contentxt").innerHTML =
-					`<h2>About ElevenBuckets</h2><br>
-						<div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
-						Fascinated by the potential of programmable Blockchain, a small group of developers in Colorado have been exploring  
-						real-world use cases of the technology since late 2016. <p id="marker">It is our belief that the value and challenge of 
-						Blockchain is to achieve mass adoption without sacrificing its peer-to-peer nature.</p><br><br>
-						We introduce <p id="marker">ElevenBuckets Environment (11BE)</p>, the core technology that combines our expertise to offer 
-						the best of both worlds: ease-of-use without central authority. We believe 11BE can bring cost-effective real-world 
-						application while safeguarding user freedom and privacy by establishing truly decentralized platform from end to end.
-					</div>`
-				 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
-			} else {
-				$('#Demos').focus();
-				return loadText('Demos');
-			}
-		}
-
-		$(document).ready(loadText);
-	</script>
+        $(document).ready(loadText);
+    </script>
 </body>
+
+</html>
