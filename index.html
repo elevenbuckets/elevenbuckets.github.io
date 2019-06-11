@@ -44,25 +44,26 @@
                 pre.style.display = 'block';
                 pre.style.textAlign = 'center';
                 pre.style.minWidth = "600px";
-                pre.style.marginTop = '35vh';
-                pre.innerHTML = `<p style="display: inline; font-size: 2.5em;">Team
+                pre.style.marginTop = '30vh';
+                pre.innerHTML = `<p style="display: inline; font-size: 6vh;">Team
                                  <img src="./assets/11be_logo_reverse.png" style="display: inline-block; width: 100px; height: 100px; vertical-align: text-bottom;"/>
                                   presents </p>`;
                 document.getElementById('contentxt').appendChild(pre);
-                t1 = setTimeout(function () { pre.innerHTML = '<p style="font-size: 2.5em">Optract</p>' }, 10000);
-                t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 20000)
+                t1 = setTimeout(function () { pre.innerHTML = '<p style="display: inline; font-size: 6vh;">Optract</p>' }, 3000);
+                t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
                 document.getElementById("contentxt").style.textAlign = "center";
                 document.getElementById("contentxt").innerHTML = `
-                <p id="tagline" style="position: absolute; left:35%; top: 35%; font-size: 1.2em;">
-                    Optract is <span class="typed" id="marker" style="font-size: 1.0em;"></span>
-                </p>`
+                <div id="tagline" style="text-align: left; position: absolute; left: 21vw; top: 27vh; font-size: 6vh; max-width: 64vw;">
+                    Optract is <br><div class="typed" id="marker" style="display: block; max-width:65vw; margin-top: 15px; margin-left: 2vw; font-size: 4.6vh;"></div>
+                </div>`
                 var deck = document.createElement('div');
                 deck.setAttribute('id', 'deck');
                 deck.setAttribute('class', 'item click w3-animate-opacity');
                 deck.style.display = 'inline-block';
-                deck.style.marginTop = '42vh';
-                deck.style.marginRight = '30px';
+                deck.style.marginTop = '60vh';
+                deck.style.marginBottom = '30px';
+                deck.style.marginRight = '60px';
                 deck.innerHTML = `<a onclick=loadText('Learn')>Learn More</a>`;
                 document.getElementById('contentxt').appendChild(deck);
 
@@ -70,12 +71,14 @@
                 team.setAttribute('id', 'team');
                 team.setAttribute('class', 'item click w3-animate-opacity');
                 team.style.display = 'inline-block';
+                team.style.marginTop = '60vh';
+                team.style.marginLeft = '20px';
                 team.innerHTML = `<a onclick=loadText('Contact')>About Us</a>`;
                 document.getElementById('contentxt').appendChild(team);
 
                 $(function () {
                     $(".typed").typed({
-                        strings: ["blockchain consensus.", "collective intelligence.",
+                        strings: ['blockchain consensus.', "collective intelligence.",
                             "curation value network.", "effective lifelong learning."],
                         // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
                         stringsElement: null,
@@ -117,13 +120,13 @@
                 document.getElementById("contentxt").style.margin = '10px';
                 document.getElementById("contentxt").innerHTML =
                     `<h2 style="text-align: center;">Our Story</h2><br>
-                                <div style="padding: 0px 6vw 0px 6vw; font-size: 22px;">
+                                <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
                                 Since late 2016, a small group of developers based in Boulder, Colorado set out to explore real-world use cases of 
                                 programmable blockchain. Our research focuses on releasing great potential of the technology beyond 
                                 financial applications. <br><br>
                                 Previously known as <p style="font-size: 22px;" id="marker">"11BE"</p>, our three-men team combined their expertise 
                                 and created the core development stack integrated with Ethereum blockchain. To help achieving better scalability, we 
-                                began applying our work to build an open layer-2 solution from scratch. In 2019, <p style="font-size: 22px;" id="marker">
+                                began applying our work to build an open layer-2 solution from scratch. In 2019, <p id="marker">
                                 Optract</p> was born to put all of our research results into building a truly unique blockchain application. 
                                 <br><br><br>
                                 <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
@@ -135,11 +138,11 @@
                 document.getElementById("contentxt").style.margin = '10px';
                 document.getElementById("contentxt").innerHTML =
                     `<h2 style="text-align: center;">Optract: A Curation Value Network.</h2><br>
-                                <div style="padding: 0px 6vw 0px 6vw; font-size: 22px;">
-                                Optract is a new kind of blockchain that utilizes <p id="marker">collective intelligence</p> at the core of its concensus with
+                                <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
+                                Optract is a new kind of blockchain that utilizes <p id="marker">collective intelligence</p> at the core of its consensus with
                                 the goal of providing bias-free content curation. <br><br> 
-                                Aimming to become a new kind of social network focusing on "What" instead of "Who", Optract offers content curation beyond personalization, 
-                                and facilitates easy-to-use environment for curation-driven group learning to address the ever-growing depands on 
+                                Aiming to become a new kind of social network focusing on "What" instead of "Who", Optract offers content curation beyond personalization, 
+                                and facilitates easy-to-use environment for curation-driven group learning to address the ever-growing demands on 
                                 lifelong learning and combat information overload of the Internet today.
                                 <br><br><br>
                                 <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>

@@ -34,7 +34,7 @@ body {
    grid-template-columns: 110px 1fr 110px;
    grid-template-areas: 
     "topbar topbar topbar"
-    "content content content"
+    ". content ."
     "footer footer footer";
 }
 
@@ -316,7 +316,7 @@ body {
 }
 
 .w3-animate-opacity{animation:opac 1.5s}@keyframes opac{from{opacity:0} to{opacity:1}}
-.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.w3-animate-fading{animation:fading 3s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
 
 .click a {
     border: 2px solid var(--black); 
@@ -355,7 +355,7 @@ body {
     body {
         max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
-        grid-template-rows: 200px 8fr 90px;
+        grid-template-rows: 50px 8fr 90px;
         grid-template-areas: 
         "topbar"
         "content"
@@ -378,7 +378,7 @@ body {
 
     #contentxt {
         overflow: auto;
-        margin-top: 40px;
+        max-width: 85vw;
     }
 
     #swap-media {
@@ -478,7 +478,7 @@ body {
 
 @media(max-width: 800px) {
     body {
-        grid-template-rows: 150px 1fr 90px;
+        grid-template-rows: 50px 1fr 90px;
     }
 
     .content {
@@ -490,7 +490,6 @@ body {
     #contentxt {
         text-align: left;
         overflow: auto;
-        margin-top: 40px;
     }
 
     #swap-media {
@@ -535,7 +534,7 @@ body {
 
 @media(max-height: 768px) {
     body {
-        grid-template-rows: 72px 1fr 90px;
+        grid-template-rows: 50px 1fr 90px;
     }
 
     .navibar div {
