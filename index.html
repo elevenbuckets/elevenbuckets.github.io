@@ -149,11 +149,11 @@
                         <img src="./assets/portrait_silhouette.png" style="grid-area: pics; width: 100%; padding: 25px;"></img>
                         <div style="text-align: left; padding: 20px; grid-area: name; min-width: 287px;"> 
                             <p style="margin: 0px; font-size: 24px;">Jason Lin</p>
-                            <p style="text-align: right; font-size: 16px;">Archetect / Lead Developer</p><hr>
+                            <p style="text-align: right; font-size: 16px;">Architect / Lead Developer</p><hr>
                         </div>
                         <div style="max-height: 30vh; overflow-y: auto; text-align: left; padding: 20px; grid-area: bio; font-size: 18px; align-content: center;">
                             <p style="font-size: 16px;"> Jason is self-taught programmer when getting his MS degree in space physics from National Central Univ., Taiwan. 
-                                After working 10+ yrs as SRE in data centers, he has been devoting himself into realizating a new, decentralized Web since 2016. 
+                                After working 10+ yrs as SRE in data centers, he has been devoting himself into realizing a new, decentralized Web since 2016. 
                             <br>
                         </div>
                     </div>
@@ -198,10 +198,38 @@
                                 By providing new experiences of effortlessly participating <p id="marker">curation-driven group learning</p>, 
                                 Optract addresses the urging demands of lifelong learning for busy professionals by helping them navigating through 
                                 the information overload of the Internet today.
-                                <br><br><br><div class="item w3-animate-opacity"><p id="marker">Optract Public Testnet is scheduled to launch in August 2019!</p></div>
-                                <br><br><br>
-                                <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
+                                <br><br><br><div class="item w3-animate-opacity"><p id="marker" style="text-decoration: underline;">Optract Public Testnet is scheduled to launch in August 2019!</p></div>
+                                <br><br>
+                                <div style="text-align: center;">
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-right: 20px;"><a onclick=loadText('Demos')>Return</a></div>
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Chain')>Technologies</a></div>
+                                </div>
                             </div>`
+                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+            } else if (section === 'Chain') {
+                document.getElementById("contentxt").style.textAlign = 'left';
+                document.getElementById("contentxt").style.margin = '10px';
+                document.getElementById("contentxt").style.display = 'block';
+                document.getElementById("contentxt").innerHTML = 
+                `<h2 style="text-align: center;">Optract: Architecture</h2><br>
+                    <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
+                        <ul>
+                            <li style="font-size: 32px; margin: 3px;"><p id="marker" style="font-size: 32px; margin: 3px;">Ethereum</p> as settlement layer:</li>
+                            <li style="margin-left: 28px;">Membership & token issuance.</li>
+                            <li style="margin-left: 28px;">Staking & block registry.</li>
+                            <li style="margin-left: 28px;">Dispute processes.</li><br>
+                            <li style="font-size: 32px; margin: 3px;"><p id="marker" style="font-size: 32px; margin: 3px;">IPFS</p> as distributed storage layer:</li>
+                            <li style="margin-left: 28px;">Ownership neutral.</li>
+                            <li style="margin-left: 28px;">Self-hosted or 3rd-party hosted.</li><br>
+                            <li style="font-size: 32px; margin: 3px;"><p id="marker" style="font-size: 32px; margin: 3px;">Optract</p> (side-chain): collective intelligence:</li>
+                            <li style="margin-left: 28px;">Randomness-infused multi-round votings.</li>
+                            <li style="margin-left: 28px;">Curation baselining over peer-to-peer network.</li>
+                            <li style="margin-left: 28px;">Flagging (proposing content filters).</li><br>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
+                `
                 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else {
                 return loadText('Vision');
