@@ -39,6 +39,7 @@
         function loadText(section) {
             if (section === 'Vision') {
                 document.getElementById("contentxt").style.textAlign = "center";
+                document.getElementById("contentxt").style.display = 'block';
                 var pre = document.createElement('div');
                 pre.setAttribute('class', 'item w3-animate-fading');
                 pre.style.display = 'block';
@@ -53,6 +54,7 @@
                 t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
                 document.getElementById("contentxt").style.textAlign = "center";
+                document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML = `
                 <div id="tagline" style="text-align: left; position: absolute; left: 21vw; top: 27vh; font-size: 6vh; max-width: 64vw;">
                     Optract is <br><div class="typed" id="marker" style="display: block; max-width:65vw; margin-top: 15px; margin-left: 2vw; font-size: 4.6vh;"></div>
@@ -113,37 +115,89 @@
                     });
                 });
 
-                //document.getElementsByClassName("content")[0].style.overflow = 'hidden';
+                document.getElementsByClassName("content")[0].style.overflowX = 'hidden';
+                document.getElementsByClassName("content")[0].style.overflowY = 'audo';
             } else if (section === 'Contact') {
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '10px';
+                document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML =
                     `<h2 style="text-align: center;">Our Story</h2><br>
                                 <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
                                 Since late 2016, a small group of developers based in Boulder, Colorado set out to explore real-world use cases of 
                                 programmable blockchain. Our research focuses on releasing great potential of the technology beyond 
                                 financial applications. <br><br>
-                                Previously known as <p style="font-size: 22px;" id="marker">"11BE"</p>, our three-men team combined their expertise 
+                                Previously known as <p id="marker">"11BE"</p>, our three-men team combined their expertise 
                                 and created the core development stack integrated with Ethereum blockchain. To help achieving better scalability, we 
-                                began applying our work to build an open layer-2 solution from scratch. In 2019, <p id="marker">
+                                began applying our works to build an open layer-2 solution from scratch. <br><br>In 2019, <p id="marker">
                                 Optract</p> was born to put all of our research results into building a truly unique blockchain application. 
                                 <br><br><br>
-                                <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
+                                <div style="text-align: center;">
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-right: 20px;"><a onclick=loadText('Demos')>Return</a></div>
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Team')>Members</a></div>
+                                </div>
                             </div>`
                 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+            } else if (section === 'Team') {
+                document.getElementById("contentxt").style.textAlign = 'justify';
+                document.getElementById("contentxt").style.margin = '0px';
+                document.getElementById("contentxt").style.display = 'grid';
+                document.getElementById("contentxt").innerHTML = `<h2 style="text-align: center;">Team</h2><br>
+                <div class="mediaContainer">
+                    <div class="person" style="height: 370px;">
+                        <img src="./assets/portrait_silhouette.png" style="grid-area: pics; width: 100%; padding: 25px;"></img>
+                        <div style="text-align: left; padding: 20px; grid-area: name; min-width: 287px;"> 
+                            <p style="margin: 0px; font-size: 24px;">Jason Lin</p>
+                            <p style="text-align: right; font-size: 16px;">Archetect / Lead Developer</p><hr>
+                        </div>
+                        <div style="max-height: 30vh; overflow-y: auto; text-align: left; padding: 20px; grid-area: bio; font-size: 18px; align-content: center;">
+                            <p style="font-size: 16px;"> Jason is self-taught programmer when getting his MS degree in space physics from National Central Univ., Taiwan. 
+                                After working 10+ yrs as SRE in data centers, he has been devoting himself into realizating a new, decentralized Web since 2016. 
+                            <br>
+                        </div>
+                    </div>
+                    <div class="person" style="height: 370px;">
+                        <img src="./assets/portrait_silhouette.png" style="grid-area: pics; width: 100%; padding: 25px;"></img>
+                        <div style="text-align: left; padding: 20px; grid-area: name; min-width: 287px;"> 
+                            <p style="margin: 0px; font-size: 24px;">Leon Zhang</p>
+                            <p style="text-align: right; font-size: 16px;">UI & UX / Math Wizard</p><hr>
+                        </div>
+                        <div style="max-height: 30vh; overflow-y: auto; text-align: left; padding: 20px; grid-area: bio; font-size: 18px; align-content: center;">
+                            <p style="font-size: 16px;"> Leon obtained his Ph.D in Mathematics and MS in Computer Science from Univ. of Colorado at Boulder. 
+                                He has been a software developer for 4+ yrs. Pondering about what blockchain could really bring to mankind, he started 
+                                studying on the subject since early 2017. 
+                            <br>
+                        </div>
+                    </div>
+                    <div class="person" style="height: 370px;">
+                        <img src="./assets/portrait_silhouette.png" style="grid-area: pics; width: 100%; padding: 25px;"></img>
+                        <div style="text-align: left; padding: 20px; grid-area: name; min-width: 287px;"> 
+                            <p style="margin: 0px; font-size: 24px;">Kai Sun</p>
+                            <p style="text-align: right; font-size: 16px;">Developer</p><hr>
+                        </div>
+                        <div style="max-height: 30vh; overflow-y: auto; text-align: left; padding: 20px; grid-area: bio; font-size: 18px; align-content: center;">
+                            <p style="font-size: 16px;"> Kai has been an open-source enthusiast since his college life and is gettng his Ph.D. in astronomy from 
+                                University of Potsdam, Germany. His passion on public education and free speach brings unique insights when he joined 11BE team in 2018.
+                            <br>
+                        </div>
+                    </div>
+                </div><br><br>
+                <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>`
+
             } else if (section === 'Learn') {
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '10px';
+                document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML =
                     `<h2 style="text-align: center;">Optract: A Curation Value Network.</h2><br>
                                 <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
-                                Optract is a new kind of blockchain that utilizes <p id="marker">collective intelligence</p> at the core of its consensus with
-                                the goal of providing bias-free content curation. <br><br> 
-                                Aiming to become a new kind of social network focusing on "What" instead of "Who", Optract offers content curation beyond personalization, 
-                                and facilitates easy-to-use environment for curation-driven group learning to address the ever-growing demands on 
-                                lifelong learning and combat information overload of the Internet today.
+                                Optract is a new kind of blockchain that utilizes <p id="marker">collective intelligence</p> at the core 
+                                of its consensus that brings high quality, bias-free content curation beyond personalization.<br><br> 
+                                By providing new experiences of effortlessly participating <p id="marker">curation-driven group learning</p>, 
+                                Optract addresses the urging demands of lifelong learning for busy professionals by helping them navigating through 
+                                the information overload of the Internet today.
                                 <br><br><br>
                                 <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
                             </div>`

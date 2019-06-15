@@ -167,14 +167,21 @@ body {
 }
 
 .mediaContainer {
-    align-items: center;
-    padding: 0px;
+    display: grid;
+    grid-template-columns: 55vw;
+    grid-template-rows: 1fr;
+    margin: 20px;
     justify-content: center;
-    display: block;
-    min-width: 100vw;
-    min-height: 50vh;
-    overflow: hidden;
-    background-color: #290020;
+}
+
+.person {
+    display: grid;
+    grid-template-areas: 
+    "pics name"
+    "pics bio"
+    "pics bio";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 105px 1fr;
 }
 
 .videoContainer {
@@ -408,16 +415,6 @@ body {
 
     .contactinfo li {
         font-size: 4.5vw;
-    }
-
-    .mediaContainer {
-        grid-template-areas: 
-      "vidtitle"
-      "videos"
-      "pictitle"
-      "pictures"
-      "pmtitle"
-      "pminfo";
     }
 
     .videoContainer {
