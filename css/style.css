@@ -184,6 +184,15 @@ body {
     grid-template-rows: 105px 1fr;
 }
 
+.pname {
+    display: grid;
+    grid-template-areas: 
+    "fullname fullname"
+    "social jobt";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 1fr;
+}
+
 .videoContainer {
     background-color: #290020;
     justify-items: center;
