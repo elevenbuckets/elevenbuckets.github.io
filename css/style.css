@@ -490,12 +490,12 @@ body {
 
 @media(max-width: 800px) {
     :root {
-        --dybackmainX: 30vw;
-        --dybackmainY: 10vh;
-        --dybackmainS: 55vw;
+        --dybackmainX: 30.5vw;
+        --dybackmainY: 12vh;
+        --dybackmainS: 58vw;
         --dybackchainX: 30.5vw;
         --dybackchainY: 6vh;
-        --dybackchainS: 53vw;
+        --dybackchainS: 56vw;
     }
 
     body {
