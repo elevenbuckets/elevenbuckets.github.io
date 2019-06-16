@@ -4,8 +4,10 @@
     --oak: #910000;
     --dybackmainX: 20vw;
     --dybackmainY: 7vh;
+    --dybackmainS: 45vw;
     --dybackchainX: 30.5vw;
     --dybackchainY: 6.4vh;
+    --dybackchainS: 42vw;
 }
   
 html {
@@ -488,10 +490,12 @@ body {
 
 @media(max-width: 800px) {
     :root {
-        --dybackmainX: 25vw;
-        --dybackmainY: 8vh;
+        --dybackmainX: 30vw;
+        --dybackmainY: 10vh;
+        --dybackmainS: 55vw;
         --dybackchainX: 30.5vw;
         --dybackchainY: 6vh;
+        --dybackchainS: 53vw;
     }
 
     body {
