@@ -38,6 +38,7 @@
         var t2;
         function loadText(section) {
             if (section === 'Vision') {
+                document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = "center";
                 document.getElementById("contentxt").style.display = 'block';
                 var pre = document.createElement('div');
@@ -53,11 +54,17 @@
                 t1 = setTimeout(function () { pre.innerHTML = '<p style="display: inline; font-size: 6vh;">Optract</p>' }, 3000);
                 t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
+                document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
+                document.getElementById("contentxt").style.backgroundRepeat = "no-repeat";
+                document.getElementById("contentxt").style.backgroundBlendMode = "lighten";
+                document.getElementById("contentxt").style.backgroundPositionX = "20vw";
+                document.getElementById("contentxt").style.backgroundPositionY = "auto";
+                document.getElementById("contentxt").style.backgroundSize = "auto";
                 document.getElementById("contentxt").style.textAlign = "center";
                 document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML = `
-                <div id="tagline" style="text-align: left; position: absolute; left: 21vw; top: 27vh; font-size: 6vh; max-width: 64vw;">
-                    Optract is <br><div class="typed" id="marker" style="display: block; max-width:65vw; margin-top: 15px; margin-left: 2vw; font-size: 4.6vh;"></div>
+                <div id="tagline" style="text-align: left; position: absolute; left: 21vw; top: 27vh; font-size: 6.5vh; max-width: 64vw;">
+                    Optract is <br><div class="typed" id="marker" style="display: block; max-width:65vw; margin-top: 15px; margin-left: 2vw; font-size: 5.6vh;"></div>
                 </div>`
                 var deck = document.createElement('div');
                 deck.setAttribute('id', 'deck');
@@ -80,8 +87,10 @@
 
                 $(function () {
                     $(".typed").typed({
-                        strings: ['blockchain consensus.', "collective intelligence.",
-                            "curation value network.", "effective lifelong learning."],
+                        strings: ['<span style="color: white; background-color: var(--yellow);">blockchain consensus.</span>', 
+                                  '<span style="color: white; background-color: var(--yellow);">collective intelligence.</span>',
+                                  '<span style="color: white; background-color: var(--yellow);">curation value network.</span>', 
+                                  '<span style="color: white; background-color: var(--yellow);">effective lifelong learning.</span>'],
                         // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
                         stringsElement: null,
                         // typing speed
@@ -118,6 +127,7 @@
                 document.getElementsByClassName("content")[0].style.overflowX = 'hidden';
                 document.getElementsByClassName("content")[0].style.overflowY = 'audo';
             } else if (section === 'Contact') {
+                document.getElementById("contentxt").style.backgroundImage = '';
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '10px';
@@ -140,6 +150,7 @@
                             </div>`
                 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else if (section === 'Team') {
+                document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '0px';
                 document.getElementById("contentxt").style.display = 'grid';
@@ -189,6 +200,7 @@
                 <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>`
 
             } else if (section === 'Learn') {
+                document.getElementById("contentxt").style.backgroundImage = '';
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '10px';
@@ -210,6 +222,12 @@
                             </div>`
                 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else if (section === 'Chain') {
+                document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
+                document.getElementById("contentxt").style.backgroundRepeat = "no-repeat";
+                document.getElementById("contentxt").style.backgroundBlendMode = "lighten";
+                document.getElementById("contentxt").style.backgroundPositionX = "30vw";
+                document.getElementById("contentxt").style.backgroundPositionY = "7vh";
+                document.getElementById("contentxt").style.backgroundSize = "55% auto";
                 document.getElementById("contentxt").style.textAlign = 'left';
                 document.getElementById("contentxt").style.margin = '10px';
                 document.getElementById("contentxt").style.display = 'block';
