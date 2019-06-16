@@ -2,6 +2,10 @@
     --yellow: #ff4200;
     --black: #272727;
     --oak: #910000;
+    --dybackmainX: 20vw;
+    --dybackmainY: 7vh;
+    --dybackchainX: 30.5vw;
+    --dybackchainY: 6.4vh;
 }
   
 html {
@@ -483,6 +487,13 @@ body {
 }
 
 @media(max-width: 800px) {
+    :root {
+        --dybackmainX: 25vw;
+        --dybackmainY: 8vh;
+        --dybackchainX: 30.5vw;
+        --dybackchainY: 6vh;
+    }
+
     body {
         grid-template-rows: 50px 1fr 90px;
     }
