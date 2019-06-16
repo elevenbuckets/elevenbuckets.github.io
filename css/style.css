@@ -491,11 +491,11 @@ body {
 @media(max-width: 800px) {
     :root {
         --dybackmainX: 30.5vw;
-        --dybackmainY: 12vh;
-        --dybackmainS: 58vw;
-        --dybackchainX: 30.5vw;
+        --dybackmainY: 16vh;
+        --dybackmainS: 59vw;
+        --dybackchainX: 31vw;
         --dybackchainY: 6vh;
-        --dybackchainS: 56vw;
+        --dybackchainS: 58vw;
     }
 
     body {
