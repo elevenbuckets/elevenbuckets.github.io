@@ -217,7 +217,7 @@
                                 <br><br>
                                 <div style="text-align: center;">
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-right: 20px;"><a onclick=loadText('Demos')>Return</a></div>
-                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Chain')>Technologies</a></div>
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Rationale')>Rationale</a></div>
                                 </div>
                             </div>`
                 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
@@ -250,6 +250,28 @@
                     </div>
                     <br>
                     <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
+                    `
+                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+            } else if (section === 'Rationale') {
+                document.getElementById("contentxt").style.backgroundImage = '';
+                document.getElementById("contentxt").style.textAlign = 'justify';
+                document.getElementById("contentxt").style.margin = '10px';
+                document.getElementById("contentxt").style.display = 'block';
+                document.getElementById("contentxt").innerHTML = `
+                <h2 style="text-align: center;">Optract: A Different Take on Blockchain</h2><br>
+                    <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
+                        <div style="margin-left: 28px;">
+                            We build Optract as side-chain protected by Ethereum for disputes and state finality. This frees up
+                            its own consensus to focus on different purposes than being a ledger. <br><br>We baked in collective intelligence 
+                            to determine curation baseline and content quality via peer-to-peer network, which is constantly grading and sharing
+                            valued contents to assist curated consumptions.
+                        </div>
+                        <br><br><br>
+                        <div style="text-align: center;">
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-right: 20px;"><a onclick=loadText('Demos')>Return</a></div>
+                                <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Chain')>Technologies</a></div>
+                        </div>
+                    </div>
                 `
                 document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else {
