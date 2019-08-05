@@ -28,7 +28,7 @@ html {
   box-sizing: inherit;
 }
 
-*:-webkit-scrollbar {width: 0 !important; }
+::-webkit-scrollbar { width: 0px; }
 
 body {
    /*background: url(/assets/Background.jpg);*/
