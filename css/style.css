@@ -34,6 +34,7 @@ body {
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
+   --webkit-scrollbar: { display: none; };
    min-height: 100vh;
    margin: 0px;
    grid-template-rows: 50px auto 100px;
@@ -74,6 +75,7 @@ body {
 
 .content {
     display: grid;
+    --webkit-scrollbar: { display: none; };
     overflow-y: auto;
     overflow-x: hidden;
     max-height: calc(100vh - 220px);
@@ -207,6 +209,7 @@ body {
     min-width: 100vw;
     min-height: 100%;
     overflow: hidden;
+    --webkit-scrollbar: { display: none; };
     align-self: center;
 }
 
@@ -400,6 +403,7 @@ body {
 
     #contentxt {
         overflow: auto;
+        --webkit-scrollbar: { display: none; };
         max-width: 85vw;
     }
 
@@ -511,6 +515,7 @@ body {
     #contentxt {
         text-align: left;
         overflow: auto;
+        --webkit-scrollbar: { display: none; };
     }
 
     #swap-media {
