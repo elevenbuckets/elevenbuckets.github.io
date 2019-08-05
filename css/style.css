@@ -27,14 +27,15 @@ html {
 *:after {
   box-sizing: inherit;
 }
-  
+
+*:-webkit-scrollbar {width: 0 !important; }
+
 body {
    /*background: url(/assets/Background.jpg);*/
    background: url(/assets/golden_blockchain.png), #f4f0fa;
    background-repeat: repeat-y;
    display: grid;
    overflow: hidden;
-   --webkit-scrollbar: { display: none; };
    min-height: 100vh;
    margin: 0px;
    grid-template-rows: 50px auto 100px;
