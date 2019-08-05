@@ -77,8 +77,7 @@ body {
 .content {
     display: grid;
     --webkit-scrollbar: { display: none; };
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: auto;
     max-height: calc(100vh - 220px);
     grid-area: content;
     justify-content: center;
@@ -403,7 +402,7 @@ body {
     }
 
     #contentxt {
-        overflow-y: hidden;
+        overflow-y: auto;
         --webkit-scrollbar: { display: none; };
         max-width: 85vw;
     }
@@ -515,7 +514,7 @@ body {
 
     #contentxt {
         text-align: left;
-        overflow-y: hidden;
+        overflow-y: auto;
         --webkit-scrollbar: { display: none; };
     }
 
