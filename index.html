@@ -125,7 +125,7 @@
                 });
 
                 document.getElementsByClassName("content")[0].style.overflowX = 'hidden';
-                document.getElementsByClassName("content")[0].style.overflowY = 'audo';
+                document.getElementsByClassName("content")[0].style.overflowY = 'hidden';
             } else if (section === 'Contact') {
                 document.getElementById("contentxt").style.backgroundImage = '';
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
@@ -148,7 +148,7 @@
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Team')>Members</a></div>
                                 </div>
                             </div>`
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+                document.getElementsByClassName("content")[0].style.overflowY = 'hidden';
             } else if (section === 'Team') {
                 document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = 'justify';
@@ -218,7 +218,7 @@
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Rationale')>Rationale</a></div>
                                 </div>
                             </div>`
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+                document.getElementsByClassName("content")[0].style.overflowY = 'hidden';
             } else if (section === 'Chain') {
                 document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
                 document.getElementById("contentxt").style.backgroundRepeat = "no-repeat";
@@ -249,7 +249,7 @@
                     <br>
                     <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
                     `
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+                document.getElementsByClassName("content")[0].style.overflowY = 'hidden';
             } else if (section === 'Rationale') {
                 document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = 'justify';
@@ -271,7 +271,7 @@
                         </div>
                     </div>
                 `
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+                document.getElementsByClassName("content")[0].style.overflowY = 'hidden';
             } else {
                 return loadText('Vision');
             }
