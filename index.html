@@ -38,6 +38,8 @@
         var t2;
         function loadText(section) {
             if (section === 'Vision') {
+                document.getElementsByClassName("content")[0].style.placeSelf = '';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = "center";
                 document.getElementById("contentxt").style.display = 'block';
@@ -51,9 +53,11 @@
                                  <img src="./assets/11be_logo_reverse.png" style="display: inline-block; width: 100px; height: 100px; vertical-align: text-bottom;"/>
                                   presents </p>`;
                 document.getElementById('contentxt').appendChild(pre);
-                t1 = setTimeout(function () { pre.innerHTML = '<p style="display: inline; font-size: 6vh;">Optract</p>' }, 3000);
+                t1 = setTimeout(function () { pre.innerHTML = '<p style="display: inline; font-size: 4em;">Optract</p>' }, 3000);
                 t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
+                document.getElementsByClassName("content")[0].style.placeSelf = 'center auto';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
                 document.getElementById("contentxt").style.backgroundRepeat = "no-repeat";
                 document.getElementById("contentxt").style.backgroundBlendMode = "lighten";
@@ -63,7 +67,7 @@
                 document.getElementById("contentxt").style.textAlign = "center";
                 document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML = `
-                <div id="tagline" style="text-align: left; position: absolute; left: 21vw; top: 27vh; font-size: 6.5vh; max-width: 64vw;">
+                <div id="tagline" style="text-align: left; position: absolute; left: 20.5vw; top: 27vh; font-size: 3em; max-width: 64vw;">
                     Optract is <br><div class="typed" id="marker" style="display: block; max-width:65vw; margin-top: 15px; margin-left: 2vw; font-size: 5.6vh;"></div>
                 </div>`
                 var deck = document.createElement('div');
@@ -89,8 +93,8 @@
                     $(".typed").typed({
                         strings: ['<span style="color: white; background-color: var(--yellow);">blockchain consensus.</span>', 
                                   '<span style="color: white; background-color: var(--yellow);">collective intelligence.</span>',
-                                  '<span style="color: white; background-color: var(--yellow);">bias-free value assessment</span>', 
-                                  '<span style="color: white; background-color: var(--yellow);">ethical data mining</span>'],
+                                  '<span style="color: white; background-color: var(--yellow);">bias-free value assessment.</span>', 
+                                  '<span style="color: white; background-color: var(--yellow);">ethical data mining.</span>'],
                         // Optionally use an HTML element to grab strings from (must wrap each string in a <p>)
                         stringsElement: null,
                         // typing speed
@@ -123,9 +127,9 @@
                         resetCallback: function () { }
                     });
                 });
-
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else if (section === 'Contact') {
+                document.getElementsByClassName("content")[0].style.placeSelf = '';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
                 document.getElementById("contentxt").style.textAlign = 'justify';
@@ -147,9 +151,9 @@
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Team')>Members</a></div>
                                 </div>
                             </div>`
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else if (section === 'Team') {
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
+                document.getElementsByClassName("content")[0].style.placeSelf = '';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '0px';
@@ -200,6 +204,8 @@
                 <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>`
 
             } else if (section === 'Learn') {
+                document.getElementsByClassName("content")[0].style.placeSelf = '';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
                 //document.getElementById("content").style.background = 'rgba(255,255,255,0.11)';
                 document.getElementById("contentxt").style.textAlign = 'justify';
@@ -207,7 +213,7 @@
                 document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML =
                     `<h2 style="text-align: center;">Optract: Bias-free Data Value Assessment</h2><br>
-                                <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
+                                <div style="padding: 10px 10vw 0px 10vw; font-size: 26px;">
                                 Optract is a consensus protocol representing <p id="marker">collective intelligence</p> for the process of 
                                 assessing the value of any information streams. It employs blockchain to encapsulate and notarize data flow 
                                 of such process while utilzing its own tokens for Proof-of-Stake mechanism to mitigate misbehaviors.
@@ -218,8 +224,9 @@
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Rationale')>Rationale</a></div>
                                 </div>
                             </div>`
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else if (section === 'Chain') {
+                document.getElementsByClassName("content")[0].style.placeSelf = '';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
                 document.getElementById("contentxt").style.backgroundRepeat = "no-repeat";
                 document.getElementById("contentxt").style.backgroundBlendMode = "lighten";
@@ -233,7 +240,7 @@
                 `<h2 style="text-align: center;">Optract: Architecture</h2><br>
                     <div style="padding: 0px 6vw 0px 6vw; font-size: 26px;">
                         <ul>
-                            <li style="font-size: 32px; margin: 3px;"><p id="marker" style="font-size: 32px; margin: 3px;">Ethereum</p> as settlement layer:</li>
+                            <li style="font-size: 32px; margin: 0px 3px 3px 3px;"><p id="marker" style="font-size: 32px; margin: 3px;">Ethereum</p> as settlement layer:</li>
                             <li style="margin-left: 28px;">Membership & token issuance.</li>
                             <li style="margin-left: 28px;">Staking & block registry.</li>
                             <li style="margin-left: 28px;">Dispute processes.</li><br>
@@ -249,8 +256,9 @@
                     <br>
                     <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
                     `
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else if (section === 'Rationale') {
+                document.getElementsByClassName("content")[0].style.placeSelf = '';
+                document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
                 document.getElementById("contentxt").style.textAlign = 'justify';
                 document.getElementById("contentxt").style.margin = '10px';
@@ -271,7 +279,6 @@
                         </div>
                     </div>
                 `
-                document.getElementsByClassName("content")[0].style.overflowY = 'auto';
             } else {
                 return loadText('Vision');
             }
