@@ -492,14 +492,14 @@ body {
     }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 1000px) {
     :root {
-        --dybackmainX: 31vw;
-        --dybackmainY: 22vh;
-        --dybackmainS: 58vh;
-        --dybackchainX: 31vw;
-        --dybackchainY: 5.5vh;
-        --dybackchainS: 56vh;
+        --dybackmainX: 35vw;
+        --dybackmainY: 17vh;
+        --dybackmainS: 48vh;
+        --dybackchainX: 40vw;
+        --dybackchainY: 2.5vh;
+        --dybackchainS: 48vh;
     }
 
     body {
@@ -560,7 +560,7 @@ body {
 
 @media(max-height: 768px) {
     body {
-        grid-template-rows: 50px 1fr 90px;
+        grid-template-rows: 10px 1fr 90px;
     }
 
     .navibar div {
@@ -568,9 +568,13 @@ body {
     }
 
     .content {
-        grid-template-rows: 4px 1fr 2%;
+        grid-template-rows: 4px 1fr 1%;
         margin: 0px;
         padding: 0 6px 0 6px;
+    }
+
+    #contentxt {
+        margin: 0px;
     }
 
     #media-intro {
