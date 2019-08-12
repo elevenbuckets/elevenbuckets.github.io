@@ -67,10 +67,10 @@ body {
   
 .topside {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 8vh;
     grid-template-areas: 
-    "logo navigation";
+    "newsbar";
     grid-area: topbar;
     /*background: linear-gradient(180deg, #1b191985, rgba(6, 6, 8, 0.055));*/
 }
@@ -460,10 +460,9 @@ body {
 
     .topside {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 2fr;
+        grid-template-rows: 1fr;
         grid-template-areas: 
-        "logo" 
-        "navigation";
+        "newsbar";
     }
 
     .item {
@@ -617,9 +616,9 @@ body {
     }
 
     .topside {
-        grid-template-columns: auto 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 
-        "logo navigation";
+        "newsbar";
     }
 }

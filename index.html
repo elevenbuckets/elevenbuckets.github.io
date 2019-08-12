@@ -42,6 +42,9 @@
         var t2;
         function loadText(section) {
             if (section === 'Vision') {
+                document.getElementsByClassName("topside")[0].classList.remove('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style = '';
+                document.getElementsByClassName("topside")[0].innerHTML = '';
                 document.getElementsByClassName("content")[0].style.placeSelf = '';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
@@ -60,6 +63,18 @@
                 t1 = setTimeout(function () { pre.innerHTML = '<p style="display: inline; font-size: 4em;">Optract</p>' }, 3000);
                 t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
+                var announce = '';
+                var announces = ['11BE Team is going to Web3 Summit 2019!', 'Optract Testnet Launching Soon!!!'];
+                Math.floor(Math.random()*10) % 2 === 0 ? announce = announces[0] : announce = announces[1]; 
+                document.getElementsByClassName("topside")[0].classList.add('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style.fontSize = '26px';
+                document.getElementsByClassName("topside")[0].style.minHeight = '34px';
+                document.getElementsByClassName("topside")[0].style.minWidth = '100vw';
+                document.getElementsByClassName("topside")[0].style.backgroundColor = '#33aaff';
+                document.getElementsByClassName("topside")[0].style.textAlign = 'center';
+                document.getElementsByClassName("topside")[0].style.color = 'white';
+                document.getElementsByClassName("topside")[0].innerHTML = announce;
+
                 document.getElementsByClassName("content")[0].style.placeSelf = 'center auto';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
@@ -132,6 +147,9 @@
                     });
                 });
             } else if (section === 'Contact') {
+                document.getElementsByClassName("topside")[0].classList.remove('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style = '';
+                document.getElementsByClassName("topside")[0].innerHTML = '';
                 document.getElementsByClassName("content")[0].style.placeSelf = '';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
@@ -163,6 +181,9 @@
                                 </div>
                             </div>`
             } else if (section === 'Team') {
+                document.getElementsByClassName("topside")[0].classList.remove('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style = '';
+                document.getElementsByClassName("topside")[0].innerHTML = '';
                 document.getElementsByClassName("content")[0].style.placeSelf = '';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
@@ -215,6 +236,9 @@
                 <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>`
 
             } else if (section === 'Learn') {
+                document.getElementsByClassName("topside")[0].classList.remove('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style = '';
+                document.getElementsByClassName("topside")[0].innerHTML = '';
                 document.getElementsByClassName("content")[0].style.placeSelf = '';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
@@ -223,19 +247,21 @@
                 document.getElementById("contentxt").style.margin = '0px';
                 document.getElementById("contentxt").style.display = 'block';
                 document.getElementById("contentxt").innerHTML =
-                    `<h2 style="text-align: center;">Optract: Bias-free Data Value Assessment</h2><br>
+                    `<h2 style="text-align: center;">Optract: From Info to Insights</h2><br>
                                 <div style="padding: 10px 8vw 0px 8vw; font-size: 26px;">
                                 Optract is a consensus protocol representing <p id="marker">collective intelligence</p> for the process of 
                                 assessing the value of any information streams. <br><br>It employs blockchain to encapsulate and notarize data flow 
                                 of such process while utilzing its own tokens for Proof-of-Stake mechanism to mitigate misbehaviors.
-                                <br><br><br><div class="item w3-animate-opacity"><p id="marker" style="text-decoration: underline;">Optract Public Testnet is scheduled to launch in August 2019!</p></div>
-                                <br><br>
+                                <br><br><br><br><br>
                                 <div style="text-align: center;">
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-right: 20px;"><a onclick=loadText('Demos')>Return</a></div>
                                 <div class="item click w3-animate-opacity" style="display: inline-block; margin-left: 20px;"><a onclick=loadText('Rationale')>Rationale</a></div>
                                 </div>
                             </div>`
             } else if (section === 'Chain') {
+                document.getElementsByClassName("topside")[0].classList.remove('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style = '';
+                document.getElementsByClassName("topside")[0].innerHTML = '';
                 document.getElementsByClassName("content")[0].style.placeSelf = '';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = "url(/assets/collective_intelligence.png)";
@@ -268,6 +294,9 @@
                     <div class="item click w3-animate-opacity"><a onclick=loadText('Demos')>Return</a></div>
                     `
             } else if (section === 'Rationale') {
+                document.getElementsByClassName("topside")[0].classList.remove('w3-animate-opacity');
+                document.getElementsByClassName("topside")[0].style = '';
+                document.getElementsByClassName("topside")[0].innerHTML = '';
                 document.getElementsByClassName("content")[0].style.placeSelf = '';
                 document.getElementsByClassName("content")[0].style.overflow = 'center auto';
                 document.getElementById("contentxt").style.backgroundImage = '';
