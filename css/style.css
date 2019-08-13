@@ -39,7 +39,7 @@ body {
    min-height: 100vh;
    margin: 0px;
    padding: 0px;
-   grid-template-rows: 15px auto 100px;
+   grid-template-rows: 34px auto 100px;
    grid-template-columns: 110px 1fr 110px;
    grid-template-areas: 
     "topbar topbar topbar"
@@ -381,7 +381,7 @@ body {
     body {
         max-height: calc(100vh - 20px);
         grid-template-columns: 1fr;
-        grid-template-rows: 15px 8fr 90px;
+        grid-template-rows: 34px 8fr 90px;
         grid-template-areas: 
         "topbar"
         "content"
@@ -406,6 +406,10 @@ body {
         overflow-y: auto;
         --webkit-scrollbar: { display: none; };
         max-width: 85vw;
+    }
+
+    #marker {
+        font-size: 2.6vh;
     }
 
     #swap-media {
@@ -503,7 +507,7 @@ body {
     }
 
     body {
-        grid-template-rows: 50px 1fr 90px;
+        grid-template-rows: 34px 1fr 90px;
     }
 
     .content {
@@ -569,7 +573,7 @@ body {
     }
 
     body {
-        grid-template-rows: 30px 1fr 90px;
+        grid-template-rows: 34px 1fr 90px;
     }
 
     .navibar div {
