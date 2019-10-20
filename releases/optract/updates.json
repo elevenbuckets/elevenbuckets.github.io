@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "optract@11be.org": {
+      "updates": [
+        {
+          "version": "1.0.1",
+          "update_link": "https://11be.org/releases/optract/Optract-1.0.1.xpi"
+        }
+      ]
+    }
+  }
+}
