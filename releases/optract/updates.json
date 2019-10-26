@@ -21,6 +21,10 @@
 	{
           "version": "1.0.5",
           "update_link": "https://11be.org/releases/optract/Optract-1.0.5.xpi"
+        },
+	{
+          "version": "1.0.6",
+          "update_link": "https://11be.org/releases/optract/Optract-1.0.6.xpi"
         }
       ]
     }
