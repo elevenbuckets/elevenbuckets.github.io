@@ -64,7 +64,7 @@
                 t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
                 var announce = '';
-                var announces = ['11BE Team is going to Web3 Summit 2019!', 'Optract Testnet Launching Soon!!!'];
+                var announces = ['11BE Team is going to MozFest 2019!','Optract Public Testnet Launching at MozFest 2019!!! <a href=https://github.com/elevenbuckets/elevenbuckets.github.io/releases>Install Now!!!</a>'];
                 Math.floor(Math.random()*10) % 2 === 0 ? announce = announces[0] : announce = announces[1]; 
                 document.getElementsByClassName("topside")[0].classList.add('w3-animate-opacity');
                 document.getElementsByClassName("topside")[0].style.fontSize = '26px';
@@ -96,9 +96,19 @@
                 deck.style.display = 'inline-block';
                 deck.style.marginTop = '60vh';
                 deck.style.marginBottom = '30px';
-                deck.style.marginRight = '60px';
+                deck.style.marginRight = '20px';
                 deck.innerHTML = `<a onclick=loadText('Learn')>Learn More</a>`;
                 document.getElementById('contentxt').appendChild(deck);
+
+                var apps = document.createElement('div');
+                apps.setAttribute('id', 'team');
+                apps.setAttribute('class', 'item click w3-animate-opacity');
+                apps.style.display = 'inline-block';
+                apps.style.marginTop = '60vh';
+                apps.style.marginLeft = '0px';
+                apps.style.marginRight = '0px';
+                apps.innerHTML = `<a href=https://github.com/elevenbuckets/elevenbuckets.github.io/releases>Install Now</a>`;
+                document.getElementById('contentxt').appendChild(apps);
 
                 var team = document.createElement('div');
                 team.setAttribute('id', 'team');
