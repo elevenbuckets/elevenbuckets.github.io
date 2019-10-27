@@ -1,30 +1,10 @@
 {
   "addons": {
-    "{5b2b58c5-1a22-4893-ac58-9ca33f27cdd4}": {
+    "optract@11be.org": {
       "updates": [
-        {
-          "version": "1.0.1",
-          "update_link": "https://11be.org/releases/optract/Optract-1.0.1.xpi"
-        },
 	{
-          "version": "1.0.2",
-          "update_link": "https://11be.org/releases/optract/Optract-1.0.2.xpi"
-        },
-	{
-          "version": "1.0.3",
-          "update_link": "https://11be.org/releases/optract/Optract-1.0.3.xpi"
-        },
-	{
-          "version": "1.0.4",
-          "update_link": "https://11be.org/releases/optract/Optract-1.0.4.xpi"
-        },
-	{
-          "version": "1.0.5",
-          "update_link": "https://11be.org/releases/optract/Optract-1.0.5.xpi"
-        },
-	{
-          "version": "1.0.6",
-          "update_link": "https://11be.org/releases/optract/Optract-1.0.6.xpi"
+          "version": "1.0.8",
+          "update_link": "https://11be.org/releases/optract/optract-1.0.8-an+fx.xpi"
         }
       ]
     }
