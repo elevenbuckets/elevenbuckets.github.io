@@ -64,7 +64,7 @@
                 t2 = setTimeout(function () { clearTimeout(t1); clearTimeout(t2); pre.style.display = 'none'; loadText('Demos') }, 6000)
             } else if (section === 'Demos') {
                 var announce = '';
-                var announces = ['11BE Team is going to MozFest 2019!','Optract Public Testnet Launching at MozFest 2019!!! <a href=https://github.com/elevenbuckets/elevenbuckets.github.io/releases>Install Now!!!</a>'];
+                var announces = ['11BE Team is going to MozFest 2019!','<div>Optract Public Testnet Launching at MozFest 2019!!! <a href=https://github.com/elevenbuckets/elevenbuckets.github.io/releases>Install Now!!!</a></div>'];
                 Math.floor(Math.random()*10) % 2 === 0 ? announce = announces[0] : announce = announces[1]; 
                 document.getElementsByClassName("topside")[0].classList.add('w3-animate-opacity');
                 document.getElementsByClassName("topside")[0].style.fontSize = '26px';
